@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="00M98kWmd0XYi1NQ8qaZJ8">
 <title>DataBase og MySQL — DB1 · Uge 47</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" data-page-node-id="B4opKG3ptT3abozY0HXG5R">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" data-page-node-id="Z9NSBIemraggAeiVDzALLT">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" data-page-node-id="Z9NSB[...]
 <style>
 :root{
   --navy:#0B2447; --blue:#1E88C7; --amber:#F59E0B;
@@ -48,61 +48,22 @@ nav .wrap{display:flex;align-items:center;gap:22px;height:58px;overflow-x:auto}
 nav .brand{font-family:'Montserrat';font-weight:800;color:var(--navy);font-size:15px;white-space:nowrap}
 nav a.nl{color:var(--muted);text-decoration:none;font-size:13.5px;font-weight:600;white-space:nowrap}
 nav a.nl:hover{color:var(--blue)}
-/* hero */
-.hero{background:linear-gradient(135deg,#0B2447 0%,#1E88C7 100%);color:#fff;position:relative;overflow:hidden;padding:96px 0 88px}
-.hero .deco{position:absolute;inset:0;opacity:.16;pointer-events:none}
-.hero h1{font-size:64px;line-height:1.12;letter-spacing:-.5px}
-.hero .sub{margin-top:18px;font-size:20px;color:rgba(255,255,255,.85)}
-.hero .meta{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px}
-.hero .chip{border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:6px 16px;font-size:14px;font-weight:600}
-.hero .chip.hot{background:var(--amber);border-color:var(--amber);color:#0B2447}
-/* chapter divider */
-.chap{background:linear-gradient(135deg,#0B2447 0%,#1E88C7 100%);color:#fff;border-radius:18px;padding:44px 48px;margin:72px 0 40px;position:relative;overflow:hidden}
-.chap .num{font-family:'Montserrat';font-weight:800;font-size:88px;line-height:1;color:rgba(255,255,255,.28)}
-.chap h2{font-size:38px;margin-top:6px}
-.chap .pages{margin-top:12px;font-size:15px;color:rgba(255,255,255,.8);font-weight:600}
-.chap .deco{position:absolute;right:-30px;top:-30px;opacity:.15;pointer-events:none}
-/* agenda */
-.ag{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-@media(max-width:860px){.ag{grid-template-columns:1fr}}
-.ag a{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;text-decoration:none;color:var(--ink)}
-.ag a:hover{border-color:var(--blue)}
-.ag .n{font-family:'Montserrat';font-weight:800;font-size:30px;color:var(--blue);min-width:52px}
-.ag .t{font-weight:700;color:var(--navy)}
-.ag .p{font-size:13px;color:var(--muted)}
-/* big anchor numbers */
-.anchor{font-family:'Montserrat';font-weight:800;font-size:110px;line-height:1;color:var(--blue)}
-/* crud letters */
-.crud{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-@media(max-width:860px){.crud{grid-template-columns:repeat(2,1fr)}}
-.crud .c{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 18px;text-align:center}
-.crud .l{font-family:'Montserrat';font-weight:800;font-size:88px;line-height:1;color:var(--navy)}
-.crud .c:first-child .l{color:var(--amber)}
-.crud .w{margin-top:8px;font-weight:700;font-size:17px;color:var(--navy)}
-.crud .d{font-size:13.5px;color:var(--muted);margin-top:4px}
-/* bars */
-.bars{display:flex;flex-direction:column;gap:16px}
-.bar-row{display:grid;grid-template-columns:130px 1fr 64px;align-items:center;gap:14px}
-.bar-row .name{font-weight:700;color:var(--navy);font-size:15px;text-align:right}
-.bar-row .track{background:#E7EEF7;border-radius:8px;height:30px;overflow:hidden}
-.bar-row .fill{height:100%;border-radius:8px;background:linear-gradient(90deg,#1E88C7,#0B2447)}
-.bar-row.hot .fill{background:linear-gradient(90deg,#F59E0B,#F5B944)}
-.bar-row .val{font-family:'MontBrains';font-family:'JetBrains Mono';font-weight:600;color:var(--navy);font-size:15px}
-/* terminal */
-.term{background:#0B2447;border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(11,36,71,.18)}
-.term .bar{display:flex;gap:8px;padding:12px 16px;background:rgba(255,255,255,.06)}
-.term .dot{width:12px;height:12px;border-radius:50%}
-.term pre{padding:20px 22px;color:#DCEBF9;font-family:'JetBrains Mono','Consolas',monospace;font-size:14.5px;line-height:1.8;overflow-x:auto}
-.term .cm{color:#8CA6C4}
-/* feature band */
-.band{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-bottom:16px}
-.band .ic{min-width:46px;height:46px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center}
-.band h3{font-size:18px;color:var(--navy);margin-bottom:4px}
-.band p{font-size:15px;color:var(--muted)}
-/* footer */
-footer{margin-top:90px;background:var(--navy);color:rgba(255,255,255,.75);padding:34px 0;font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:gap;12px}
-footer b{color:#fff;font-family:'Montserrat'}
+
+/* Back button */
+.back-button {
+  display:inline-block;
+  margin:16px 0 0;
+  padding:8px 14px;
+  border-radius:8px;
+  background:#fff;
+  border:1px solid var(--line);
+  color:var(--navy);
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 2px 8px rgba(11,36,71,.04);
+}
+.back-button:hover { border-color:var(--blue); color:var(--blue); }
+
 </style>
 </head>
 <body data-page-node-id="vSAy0FbGP5orQB0FGZKnWz">
@@ -123,7 +84,7 @@ footer b{color:#fff;font-family:'Montserrat'}
 <path d="M100 0 V500 M260 0 V500 M420 0 V500 M580 0 V500 M740 0 V500 M900 0 V500 M1060 0 V500" data-page-node-id="sVImpLVBL8aL5oRyA6L9Ii"/>
 </g>
 <g fill="#fff" data-page-node-id="uQQxHb1xI3v9JzQKcJ9pB5">
-<ellipse cx="980" cy="250" rx="90" ry="26" data-page-node-id="dyYskoGEkSNBmMkuV81xn5"/><path d="M890 250 v60 a90 26 0 0 0 180 0 v-60" fill="none" stroke="#fff" stroke-width="2" data-page-node-id="3GbPQ9aHNVEld2huJ7jUSE"/>
+<ellipse cx="980" cy="250" rx="90" ry="26" data-page-node-id="dyYskoGEkSNBmMkuV81xn5"/><path d="M890 250 v60 a90 26 0 0 0 180 0 v-60" fill="none" stroke="#fff" stroke-width="2" data-page-node-id="xP0x4P51tWING7QWQvMHUD"/>
 <ellipse cx="980" cy="310" rx="90" ry="26" opacity=".5" data-page-node-id="BFpd2l5VL3vuKUNCnCkhBf"/>
 </g>
 </svg>
@@ -142,21 +103,23 @@ footer b{color:#fff;font-family:'Montserrat'}
 
 <main class="wrap" data-page-node-id="pKsTLqXlCsYmiSoUPHGEyQ">
 
+<a href="index.html" class="back-button" title="Back to index">← Back to index</a>
+
 <section id="ugeplan" data-page-node-id="dpj8o5HLBOdj2vCJyOHrnP">
 <p class="kicker" data-page-node-id="lHN7rEUIUCFX0xTXWwZPV5">UgePlan</p>
 <h2 class="sec" data-page-node-id="oC6t5D2x9SyxQJB0iQiuuA">Ugeplan — uge 47–49</h2>
 <div class="sec-rule" data-page-node-id="DXImlVPWFJDV9ePQa1GBuQ"></div>
-<p class="lead" data-page-node-id="u7Mji9pY2aEOm76WZgJnue">Dagens pensum er inddelt i fire kapitler. Kapitlerne bygger på hinanden: først <b data-page-node-id="NwQmnyvYniReJ0r9ME6Xld">hvorfor</b> databaser, derefter <b data-page-node-id="gz6rmteV32kEPrW645MQVH">hvordan</b> relationsdatabaser er opbygget, så <b data-page-node-id="boB9iopHwiuQ6IckYdnZOj">øvelse</b>, og til sidt <b data-page-node-id="7Y7gnrambVDzeDB6v7u7Wu">MySQL Workbench</b> i praksis.</p>
+<p class="lead" data-page-node-id="u7Mji9pY2aEOm76WZgJnue">Dagens pensum er inddelt i fire kapitler. Kapitlerne bygger på hinanden: først <b data-page-node-id="NwQmnyvYniReJ0r9ME6Xld">hvorfor</b> vi har databaser, derefter hvordan de er bygget, og til sidst hvordan vi bruger dem i praksis.</p>
 <div class="ag" data-page-node-id="8WhQWn5THSbs1lNOuoKV7I">
-<a href="#k1" data-page-node-id="ZJ9kjaskgGym9BrQZ5AYEF"><span class="n" data-page-node-id="Jn3AxiJDDw1nmNC4nH6Qb1">01</span><span data-page-node-id="enqH1mTIxdhE7XM2CxAEjI"><span class="t" data-page-node-id="US47tKzRzbwlUBFFtAwLyX">Databaser og DBMS</span><br data-page-node-id="V6AFa8bHBCNkPdImtpDW6S"><span class="p" data-page-node-id="mWppHLd47AgzxbUrzVYMbe">Læringsmål · applikationer · filbaseret · DBMS · s. 4–8</span></span></a>
-<a href="#k2" data-page-node-id="xGWGOupNw8rRUsavQPnyeh"><span class="n" data-page-node-id="wtIrMUkH7AjsssBaLOW4Yj">02</span><span data-page-node-id="i70i24NOfT3WXs0HDtA70w"><span class="t" data-page-node-id="0B9b5gAtkjXguIlkr8gJ0h">Relationsdatabaser og SQL</span><br data-page-node-id="W6MIOmoM3KO6HIjwU8GZjn"><span class="p" data-page-node-id="WFhFdvFBEwSq5QIAA6cYGJ">Codd · CRUD · terminologi · relationer · s. 10–15</span></span></a>
-<a href="#k3" data-page-node-id="uTGZBqHwNVOfDzpqukZsVM"><span class="n" data-page-node-id="M4WyQuk64BpJjcqcHVzATD">03</span><span data-page-node-id="gzmQhmBaIoRJILbYV5noGY"><span class="t" data-page-node-id="CXBhTUGunMJJzxGKCFOrqE">Øvelser</span><br data-page-node-id="zFCpotvF8XxGoaKCQw0SqQ"><span class="p" data-page-node-id="P92KuJnAhHXsBvru7FMyNm">Quiz + øvelse 1–3 med tabeller og nøgler · s. 17–20</span></span></a>
-<a href="#k4" data-page-node-id="7ShrpboM0oTyzDPcLspa60"><span class="n" data-page-node-id="fw55KL2yRmY7FnMlj6s6JI">04</span><span data-page-node-id="g1ER2AgKTnm7rSycPuq1lW"><span class="t" data-page-node-id="842HrU3v1s0purtw2IEHTE">MySQL og Workbench</span><br data-page-node-id="OE8mVuj38FtjLDp2ivjryy"><span class="p" data-page-node-id="bvG0UXuNpJFlWw7VItDsbB">Overblik · demo · CRUD · ekstra funktioner · s. 22–30</span></span></a>
+<a href="#k1" data-page-node-id="ZJ9kjaskgGym9BrQZ5AYEF"><span class="n" data-page-node-id="Jn3AxiJDDw1nmNC4nH6Qb1">01</span><span data-page-node-id="enqH1mTIxdhE7XM2CxAEj8I"><span class="t" data-page-node-id="dCgSq3Q4mqpfAWF0wD4B5e">Databaser &amp; DBMS</span><span class="p" data-page-node-id="EDvSkT20oGmCIgJvw0u4Uh">s. 4–8</span></span></a>
+<a href="#k2" data-page-node-id="xGWGOupNw8rRUsavQPnyeh"><span class="n" data-page-node-id="wtIrMUkH7AjsssBaLOW4Yj">02</span><span data-page-node-id="i70i24NOfT3WXs0HDtA70w"><span class="t" data-page-node-id="aJ9MSjEHnU7JYJ7wBhampq">Relationsdatabaser &amp; SQL</span><span class="p" data-page-node-id="Y8EVT4vgi5XQxZR8fS2xu6">s. 10–15</span></span></a>
+<a href="#k3" data-page-node-id="uTGZBqHwNVOfDzpqukZsVM"><span class="n" data-page-node-id="M4WyQuk64BpJjcqcHVzATD">03</span><span data-page-node-id="gzmQhmBaIoRJILbYV5noGY"><span class="t" data-page-node-id="pxG5Qa42H0S4J9HSev8fXx">Øvelser</span><span class="p" data-page-node-id="Ww0aenPGYg5BP2EqdM1M5g">s. 17–20</span></span></a>
+<a href="#k4" data-page-node-id="7ShrpboM0oTyzDPcLspa60"><span class="n" data-page-node-id="fw55KL2yRmY7FnMlj6s6JI">04</span><span data-page-node-id="g1ER2AgKTnm7rSycPuq1lW"><span class="t" data-page-node-id="HsuL6mx0S6h3C5s1R7d4hQ">MySQL &amp; Workbench</span><span class="p" data-page-node-id="rxo6M1xqoL1mSS5M0kFKQx">s. 22–30</span></span></a>
 </div>
 </section>
 
 <div class="chap" id="k1" data-page-node-id="PWXPCKg1MAbM1BcK3HE3dW">
-<svg class="deco" width="260" height="260" viewBox="0 0 100 100" aria-hidden="true" data-page-node-id="zjPMR5JFnW7raG3mgrWKYx"><g fill="none" stroke="#fff" stroke-width="1.2" data-page-node-id="tEKzW36eN6mRmOLtBeATzP"><circle cx="50" cy="50" r="46" data-page-node-id="25yxB3nvrEkhl7TbmrHikh"/><circle cx="50" cy="50" r="32" data-page-node-id="KlkeA4YAwcDsHrQjewhC4w"/><circle cx="50" cy="50" r="18" data-page-node-id="9aO6UXuHClGqsktXFA48LW"/><path d="M50 4 V96 M4 50 H96" data-page-node-id="dkirgEuIgHk1YA9xzTfDtO"/></g></svg>
+<svg class="deco" width="260" height="260" viewBox="0 0 100 100" aria-hidden="true" data-page-node-id="zjPMR5JFnW7raG3mgrWKYx"><g fill="none" stroke="#fff" stroke-width="1.2" data-page-node-id="tSBVnmsjXv2U1kM44OVJ3O"><path d="M25 10 L65 10 L90 30 V90 H10 V20 Z" data-page-node-id="j0vT1j76kyP5vU6QbQ0xiE"/><path d="M65 10 V30 H90" data-page-node-id="8Y0C0mcA9f4hBlSMnFCVbB"/></g></svg>
 <div class="num" data-page-node-id="zYRvVJfk6cAaal73nGNyN3">01</div>
 <h2 data-page-node-id="y7lWClAReaQ158wXCsi1rc">Databaser og DBMS</h2>
 <p class="pages" data-page-node-id="F9Ruy4223es7LzK584LxZm">Læringsmål · databaseapplikationer · filbaseret tilgang · DBMS · populære DBMS — s. 4–8</p>
@@ -190,195 +153,48 @@ footer b{color:#fff;font-family:'Montserrat'}
 <p class="lead" data-page-node-id="fvRT32gHTqkFYI8W9loJF2">Databaser arbejder usynligt bag grunden af hverdagen. Fem situationer, du allerede kender:</p>
 <div class="grid3" data-page-node-id="DEnSdETHtzXx9EpPHFlZqb">
 <div class="card" style="text-align:center" data-page-node-id="tiiw4zWm9vFtXS7egCuXTo">
-<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="dWDqlgVoa46GiB4FQIHJ5z"><circle cx="9" cy="20" r="1.6" data-page-node-id="eQ1H9lBawzzkqqMfiWjrTJ"/><circle cx="18" cy="20" r="1.6" data-page-node-id="Lass3CJaGcL7BGy0mJpXS9"/><path d="M2 3h3l3 12h11" data-page-node-id="bHLWNTW9XoprSQg2LnMcSX"/><path d="M7 6h14l-2 7H8" data-page-node-id="LI49vpR9i3rozgNN4S4q1O"/></svg>
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="dWDqlgVoa46GiB4FQIHJ5z"><circle cx="9" cy="20" r="1.6" data-page-node-id="eQ1H9lM0m29RsmOcT7FQj6"/><path d="M7 12h6v8H7zm6-8h2l2 3v2h-4z" data-page-node-id="V7DBLQ1YQUP4LqnZq0mJzz"/></svg>
 <h3 style="margin-top:12px" data-page-node-id="6Sl2igD29PslMxdsBYYWLn">Supermarkedet</h3><p class="muted" data-page-node-id="XNaAHEyz2jfyxss6bWZurm">Indkøb i supermarkedet</p>
 </div>
 <div class="card" style="text-align:center" data-page-node-id="tHZWDwDS8zh22dHYCKD7Hb">
-<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="tal96MeIABwtHmN1OkFA4O"><rect x="2" y="5" width="20" height="14" rx="2" data-page-node-id="gFnXDLtMGUMWWosbSz4ohc"/><path d="M2 10h20M6 15h4" data-page-node-id="LJnsM3iSv9wRGGkRIDSX9l"/></svg>
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="tal96MeIABwtHmN1OkFA4O"><rect x="2" y="5" width="20" height="14" rx="2" data-page-node-id="0JGMK35jw8kUblCAbFfXwA"/><path d="M2 10h20" data-page-node-id="f7Lm8xO6OcG4HqMapDh1xE"/></svg>
 <h3 style="margin-top:12px" data-page-node-id="Me8WituXr3SO7KGOPdjgiA">Kreditkort</h3><p class="muted" data-page-node-id="15fj0juYeH6jlPEmqi6j31">Indkøb med kreditkort</p>
 </div>
 <div class="card" style="text-align:center" data-page-node-id="LYjBnHpkjEFqKLdNgy8OBd">
-<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="5s4A43GScVngM5Eyk5f0tK"><path d="M2 12l20-7-5 14-3.5-4.5L2 12z" data-page-node-id="heHpMc5BB8GSo8ApXMkcAI"/></svg>
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="5s4A43GScVngM5Eyk5f0tK"><path d="M2 12l20-7-5 14-3.5-4.5L2 12z" data-page-node-id="a3bP0X2VLLwZ7J5vT2dhmV"/></svg>
 <h3 style="margin-top:12px" data-page-node-id="5IcJJRtCzNjE6dWBgaHqmh">Rejsebureau</h3><p class="muted" data-page-node-id="FGpqqMo5Upe9jmKIVpXFTu">Bestilling af ferie</p>
 </div>
 <div class="card" style="text-align:center" data-page-node-id="lWt2yQF37ZBwW2ZwGGhv7m">
-<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="EJY5UngzPVtB4wOHVuBU2O"><path d="M4 4h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4z" data-page-node-id="KxC2tknEF5aSmETSBXQqYF"/><path d="M20 4h-6a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z" data-page-node-id="CouHreMHBbsY9U2yHPXVER"/></svg>
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="EJY5UngzPVtB4wOHVuBU2O"><path d="M4 4h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H4z" data-page-node-id="yFDE7mE6B3owqU5aE1mK0r"/><path d="M12 6h8a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2h-8z" data-page-node-id="hBbV3L5N9u5MdeWMoFZ2bh"/></svg>
 <h3 style="margin-top:12px" data-page-node-id="Npk71H2wSDdzO3UhgKlrog">Bibliotek</h3><p class="muted" data-page-node-id="M0oc2j3rFBPQLyktHvcFhi">Brug af det lokale bibliotek</p>
 </div>
 <div class="card" style="text-align:center" data-page-node-id="VQEBA5OWslfFRo2yDF6qEt">
-<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="4OvwofkVxynMxSUfsTQBle"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" data-page-node-id="oEkG7zVwWRezBN11jC7ixk"/><path d="M9 12l2 2 4-4" data-page-node-id="HK4hIgHRWMWsoadxWJ2QAl"/></svg>
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="4OvwofkVxynMxSUfsTQBle"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" data-page-node-id="vUQJ5V8BobGq7XdlM5u4K4"/></svg>
 <h3 style="margin-top:12px" data-page-node-id="KxKv1vjqIHQwPCetkepb3A">Forsikring</h3><p class="muted" data-page-node-id="sptbYWmfpkP20RVYTdpzbe">Tegning af forsikring</p>
 </div>
 <div class="card" style="background:var(--soft);border-style:dashed;display:flex;align-items:center;justify-content:center" data-page-node-id="biAMay0ZP4qSbHtLAK5wTp">
-<p style="font-weight:700;color:var(--navy);text-align:center" data-page-node-id="o8MJntxLw5hABgZinqeSlP">Fællesnævneren: data, der skal kunne <span class="amber" data-page-node-id="9VehZG2gUFFbD0F3v2UE5u">findes, opdateres og søges i</span>.</p>
-</div>
-</div>
-</section>
-<section id="filbaseret" data-page-node-id="YFVZ7wrgVsA1f8arfkMnN0">
-<p class="kicker" data-page-node-id="5wpoGHqZm9sOrHbrOZrKdy">Kapitel 01</p>
-<h2 class="sec" data-page-node-id="bKosyQXXFt8QjDsFHKNvyR">Filbaseret database</h2>
-<div class="sec-rule" data-page-node-id="SaVCB5rJPKLeKzT0ZuK6dY"></div>
-<div class="grid2" data-page-node-id="oZpcVjftqWpPY1SwCazW1j">
-<figure data-page-node-id="aWmaL5fEMlOPIbAGjBtZ3I"><img class="shot" src="assets/filebased_db.png" alt="Filbaseret database: data entry og reports via fælles file handling routines og file definition" data-page-node-id="5RpbW2iRBizQylyO2A9sR5"><figcaption data-page-node-id="8S0B2tiQDyx31SIhjfbWTC">Data entry / reports → file handling routines + file definition → filer. Kilde: undervisningsmateriale.</figcaption></figure>
-<div data-page-node-id="CXFa2Iob3JEFusFTxEk0GU">
-<div class="card" data-page-node-id="fD2gDSHuJT3OEmp24WqQM1">
-<h3 data-page-node-id="9G7r6ZVm6RLftAbpjk5xMA">Hvad er problemet?</h3>
-<p data-page-node-id="gSyQAIwPALo1qFmZ3x9rfU">Hver applikation har sin <b data-page-node-id="tGKLJUb47C5HpJ0vYeYEqz">egen kopi</b> af file handling routines og file definition. Det betyder:</p>
-<ul class="tick" style="margin-top:12px" data-page-node-id="xEIZlREg1wiCiOMMb7mQ7R">
-<li data-page-node-id="c7FdFpat8zBLDbbhqTzcKM"><b data-page-node-id="6i4ZWZb8Fq939U8Gzz2pDw">Data duplikering</b> — samme data gemmes mange steder</li>
-<li data-page-node-id="lu4GcGtYrrfZLeVwAvC48k"><b data-page-node-id="ctmJ5bCUVI2yPyVrbJRUwk">Inkonsistens</b> — opdateres én kopi, blir de andre forældede</li>
-<li data-page-node-id="MNLOqkrbAuCWcczCsfaxwb"><b data-page-node-id="A9VCTPRoKmmdpIhsdE4wrc">Data isolation</b> — data sidder fast i separate filer</li>
-<li data-page-node-id="cuFEEaqLLx01FMNnw9WIBX"><b data-page-node-id="k1G5oeOrpqm4Sg4549maCb">Integritetsproblemer</b> — ingen fælles regler for gyldigdata</li>
-</ul>
-</div>
-<p class="qa" style="margin-top:18px" data-page-node-id="yyGbxkC2cLfeTAvZWCSWzX">Konklusion: flere applikationer på samme data kræver ét fælles system — en database.</p>
-</div>
-</div>
-</section>
-
-<section id="dbms" data-page-node-id="HoG99IEF4bjlYgI2JiJfrN">
-<p class="kicker" data-page-node-id="0mTz3By8SYjCp7pmavG99l">Kapitel 01</p>
-<h2 class="sec" data-page-node-id="YSEAYsrtot5pPYlNMJscQO">Database Management System (DBMS)</h2>
-<div class="sec-rule" data-page-node-id="jLlcXk6bS3hSZICGxiAXnR"></div>
-<figure data-page-node-id="IwNI1XfbVSGL1oogqJmzkx"><img class="shot" src="assets/dbms_architecture.png" alt="DBMS-arkitektur: applikationer, DBMS og fysiske filer med DreamHome-eksemplet" data-page-node-id="mgO3ciElDxVBVhdU3ikGbf"><figcaption data-page-node-id="Bn22y1j2hgydqW4sp4SqIc">Applikationer taler med DBMS’et — ikke med filerne direkte. Kilde: undervisningsmateriale (DreamHome).</figcaption></figure>
-<div class="grid3" style="margin-top:24px" data-page-node-id="GfTHzXc9xDBEy6ASiElFzm">
-<div class="card" data-page-node-id="bxHAsMfPyw4FJrECenRsyo"><h3 data-page-node-id="C2ybWqXEaOqqQDOj0Gtx80">Central lagring</h3><p class="muted" data-page-node-id="MBauFXDMeNAEIahkBEGaMr">Data ligger ét sted og deles mellem flere applikationer — uden dobbelt opbevaring.</p></div>
-<div class="card" data-page-node-id="hNdMpaPtrYXaLqAgZ40He0"><h3 data-page-node-id="sksM9Bm2TiPQZ04yv6BdrW">Samtidig adgang</h3><p class="muted" data-page-node-id="omiyIZ2YEVnegne31vd5HN">Flere brugere kan læse og opdatere samtidig; DBMS’et styrer konflikter.</p></div>
-<div class="card" data-page-node-id="fcuGRhklyL7mMdYIOm8jqR"><h3 data-page-node-id="gtijOQnPAo2i5wKwDiEFQn">Forespørgsler &amp; sikkerhed</h3><p class="muted" data-page-node-id="N1Zuod9sZHWV54XVMnLD3g">Søgning, rettigheder og backup håndteres centralt i stedet for i hver app.</p></div>
-</div>
-</section>
-
-<section id="populaere" data-page-node-id="IFtZ8O2Vgx2rqQRVo6AoWT">
-<p class="kicker" data-page-node-id="HhCZWYhCkwAZm90CTJABfK">Kapitel 01</p>
-<h2 class="sec" data-page-node-id="dl0Tze7OQ6SoUi5uBdLuHX">Populære DBMS</h2>
-<div class="sec-rule" data-page-node-id="2WD2So7NqPmrU1XJbMEsY6"></div>
-<div class="grid2" data-page-node-id="a5s5GdGOGoRX3J7rC8RdnY">
-<figure data-page-node-id="90IB3AOrOJJyZVya4y4Sqj"><img class="shot" src="assets/dbms_landscape.png" alt="Oversigt over populære databasesystemer" data-page-node-id="t6S5LnSjrFSRHGphgE1TsX"><figcaption data-page-node-id="mQ76fFuAX8V2Hc6movW7Kl">Oversigt over populære DBMS. Kilde: undervisningsmateriale.</figcaption></figure>
-<div data-page-node-id="uhTrbwmjtL4WotCBfIFxC6">
-<div class="card" data-page-node-id="X9AajQQ9lmJ6FwIoZ5u6Dz">
-<h3 data-page-node-id="3n7ZRhOzfrwAP4rGgzDUwA">Hvem bruger hvad?</h3>
-<p data-page-node-id="Ismg7Gx9Elo1atOZfjWH5x">Oracle og Microsoft SQL Server dominerer de store enterprise-løsninger. <b data-page-node-id="VWFeRT71xNUcR5EAhcPHYT">MySQL</b> og <b data-page-node-id="CHYxeKnY0J3UQ79wegdUX3">PostgreSQL</b> er verdens mest udbredte open source-systemer.</p>
-<p class="qa" style="margin-top:16px" data-page-node-id="BnaDnyVjGYorte5wacbIut">Which are open source?</p>
-<p class="muted" style="margin-top:14px;font-size:14px" data-page-node-id="VeWLWAFO7pFpcDlDkN42Ou">Bemærk: Oracle tjener fortsat mest på cloud-tjenester (OCI) og licensaftaler — open source-konkurrenter som MySQL/PostgreSQL presser priserne.</p>
-</div>
+<p style="font-weight:700;color:var(--navy);text-align:center" data-page-node-id="o8MJntxLw5hABgZinqeSlP">Fællesnævneren: data, der skal kunne <span class="amber" data-page-node-id="9VehZG2gUFFnDOWcL9gZcd">opbevares, ændres og søges</span>.</p>
 </div>
 </div>
 </section>
 <div class="chap" id="k2" data-page-node-id="36uNEtHPdoQTMk3LYHxoKg">
-<svg class="deco" width="260" height="260" viewBox="0 0 100 100" aria-hidden="true" data-page-node-id="pLp34exTyI5NoBLd02LLKa"><g fill="none" stroke="#fff" stroke-width="1.2" data-page-node-id="xcqfs7IV7SKN8qrJQl7ueh"><rect x="14" y="14" width="32" height="32" rx="4" data-page-node-id="Fe9F6DHF0dwePs13lbggvQ"/><rect x="54" y="14" width="32" height="32" rx="4" data-page-node-id="cE7T3G1mMQIGrHHwq0qHwF"/><rect x="14" y="54" width="32" height="32" rx="4" data-page-node-id="qDjV1A4zDQBWXyQTVaqWsG"/><rect x="54" y="54" width="32" height="32" rx="4" data-page-node-id="l5MxhoTLjv3JBsGLXBGhH3"/><path d="M46 30h8M46 70h8M30 46v8M70 46v8" data-page-node-id="IABBzkNRIqthVV592IjRhG"/></g></svg>
+<svg class="deco" width="260" height="260" viewBox="0 0 100 100" aria-hidden="true" data-page-node-id="pLp34exTyI5NoBLd02LLKa"><g fill="none" stroke="#fff" stroke-width="1.2" data-page-node-id="x6I2A2r3qub2W0G7yn9Bvv"><path d="M25 10 L65 10 L90 30 V90 H10 V20 Z" data-page-node-id="w8fQ0m6MZ5mS0dQnBhG0m4"/><path d="M65 10 V30 H90" data-page-node-id="pikn1vJgK3gPRuJ0qs8qem"/></g></svg>
 <div class="num" data-page-node-id="4p3gBkAAnYaiVNvbvGA4Pg">02</div>
 <h2 data-page-node-id="8MT7vnqZ5FjBTgvYviYHvF">Relationsdatabaser og SQL</h2>
 <p class="pages" data-page-node-id="BKvhFeDvuYuFqmbHJpAKyo">Historien · SQL &amp; CRUD · mini-quiz · terminologi · relationer — s. 10–15</p>
 </div>
 
-<section id="historie" data-page-node-id="SyTsQEOmGJH8eumDPcSExd">
-<p class="kicker" data-page-node-id="GzjQZEDD41z0xbYi8wG3mL">Kapitel 02</p>
-<h2 class="sec" data-page-node-id="lP9xCtBAr5t7ZpIi5M8gyK">Historien om relationsdatamodellen</h2>
-<div class="sec-rule" data-page-node-id="edduLgQfusw3kdgPtbzOJJ"></div>
-<div class="grid3" data-page-node-id="RavuyaCw2hvKLnXkG4zn2q">
-<div class="card" data-page-node-id="Nv59KybTzxl6JoL0j2fkVR">
-<div class="anchor" style="font-size:74px" data-page-node-id="HxXCwHOaTYZY8b3xuhAmHB">1970</div>
-<h3 style="margin-top:10px" data-page-node-id="5wWSZRBvUonQR0kmwBTyKg">Introduktion af datamodellen</h3>
-<p class="muted" data-page-node-id="7HMrTPfDarEpjMHffBsD38">E.F. Codd introducerede relationsdatamodellen i <b data-page-node-id="97wfB8DHgyyev11U2rlBcQ">1970 hos IBM</b> og revolutionerede måden, data organiseres på.</p>
-</div>
-<div class="card" data-page-node-id="VnqZjzf858sA1eWAGih1bH">
-<h3 data-page-node-id="MeNN4Hkd8p3HAwYVZNxr20">Grundlag for moderne databaser</h3>
-<p class="muted" data-page-node-id="vmATFthgRb9DiJULCGsyrp">Codds model lagde fundamentet for moderne databaser og effektiv datahåndtering.</p>
-<p class="pill" style="margin-top:12px" data-page-node-id="gxhKNxxUnfjKlQ5Ct9YRPh">Stadig industristandard 50+ år senere</p>
-</div>
-<div class="card" data-page-node-id="6VqtkKmSGJhlqs8CRefsKX">
-<h3 data-page-node-id="HjRlh2SbUKxj9CsdPHOkRf">Forespørgselssproget</h3>
-<p class="muted" data-page-node-id="T8IDgEvjF9RTcUuD9eztwk">Codd beskrev teoretiske forespørgselssprog, der senere førte til udviklingen af <b data-page-node-id="STccJG5cMjCJ3EY0NxepSF">SQL</b>.</p>
-<p class="pill" style="margin-top:12px" data-page-node-id="p6EGCTgMUGcl00UdxqcGfa">Teori → SQL</p>
-</div>
-</div>
-</section>
-
-<section id="sql" data-page-node-id="97xsuo1iTKfPzi6JCIzIBW">
-<p class="kicker" data-page-node-id="elSWnUJHVGjXxevzL8NAjt">Kapitel 02</p>
-<h2 class="sec" data-page-node-id="GuXbyRUAJbH1CwmF5S4VSW">SQL betydning</h2>
-<div class="sec-rule" data-page-node-id="u4R97EFkfbGdoTNRYdIt5C"></div>
-<p class="lead" data-page-node-id="ORfpnoSelZr6C4z5L7TYBg">SQL står for <b data-page-node-id="RIznvKtwjEUHaGHixmsJ9S">Structured Query Language</b> — det mest anvendte sprog til at arbejde med relationelle databaser. Oprindeligt hed sproget <b data-page-node-id="3jiEPGnGigoD7g1esmwamV">SEQUEL</b>, men navnet blev ændret af juridiske årsager.</p>
-<div class="crud" data-page-node-id="Z3zLSGIb2iYGvhax7BB7W5">
-<div class="c" data-page-node-id="DxabOnPRfNvgtjZd8CDU9w"><div class="l" data-page-node-id="9fhCx6hGBIMoH5vtauMqDF">C</div><div class="w" data-page-node-id="bHjsGIullogmh7vpnRnnQV">Create</div><div class="d" data-page-node-id="nOfoBRbUhrHOerRSCkDC4y">Opret data — <span class="mono" data-page-node-id="ZoFAPCGJahD0zv3mXbkJ9Y">INSERT</span></div></div>
-<div class="c" data-page-node-id="iQjVq0gnOqFs9miaE1LKoD"><div class="l" data-page-node-id="EEcwPjfAHYprijwGOjaRxj">R</div><div class="w" data-page-node-id="YVSrMspMrx5cz3Xc6DnWNh">Read</div><div class="d" data-page-node-id="CoUbcnfwp2g0X7kAl5iD35">Læs data — <span class="mono" data-page-node-id="qeS3ArFitVGZ6NVd8vv41o">SELECT</span></div></div>
-<div class="c" data-page-node-id="uDxHlkl7CaPDRhgyoAyNyQ"><div class="l" data-page-node-id="tzJqyE52nKkTauhxlLtkfP">U</div><div class="w" data-page-node-id="GOIBVaFFF1lteEs4rK4dd1">Update</div><div class="d" data-page-node-id="T0As8hKuXgQgSpFroZIyaE">Opdater data — <span class="mono" data-page-node-id="2gkEc0OGr3lVOBVwB09R91">UPDATE</span></div></div>
-<div class="c" data-page-node-id="TU8n2QIwl1xF3oHTydOYUv"><div class="l" data-page-node-id="paR1t3kInTQ0Z6W5e0kOrx">D</div><div class="w" data-page-node-id="GoINyVgqu5VDxXVbR8vYRI">Delete</div><div class="d" data-page-node-id="c3fbZl2eR5ctnPuXwzAd0X">Slet data — <span class="mono" data-page-node-id="ZvBiseXHkZCkBeH8K1Q3vB">DELETE</span></div></div>
-</div>
-<p class="qa" style="margin-top:24px" data-page-node-id="NsoyYbpNV39lZtXDRvDYiw">CRUD = de fire grundoperationer, som enhver databaseapplikation bygger på.</p>
-</section>
-
-<section id="miniquiz" data-page-node-id="ZD0ZZ41yvbWsLMSOUYGy2W">
-<p class="kicker" data-page-node-id="w0O31207ExuAhNs8Z7MCHI">Kapitel 02 · Mini-Quiz</p>
-<h2 class="sec" data-page-node-id="VSEjelyB8hxYYnLozb6XiK">Mini-Quiz</h2>
-<div class="sec-rule" data-page-node-id="9DV5LEAABLQdyW6JvYY8QW"></div>
-<div style="display:flex;flex-direction:column;gap:18px;max-width:820px" data-page-node-id="GWIiu0dpzF3ONp5ERaGyWK">
-<div class="qa" data-page-node-id="Jrss2BYNKdrjAoAOKJxGXG">1. Hvem introducerede det relationelle datamodel-koncept, og i hvilket år / hvor?</div>
-<div class="qa" data-page-node-id="ID1Lc3gm6viB5p1uZBP5Wc">2. Hvornår blev SEQUEL omdøbt til SQL, og hvad står SQL for?</div>
-</div>
-<p class="muted" style="margin-top:18px;font-size:14px" data-page-node-id="afSDTSANMwAFLJFrCVGmsu">Diskutér i parvist — svaret gemmer sig to sektioner oppe på siden.</p>
-</section>
-
-<section id="terminologi" data-page-node-id="GYNW6WlHcFHUHJMUwdG1Hu">
-<p class="kicker" data-page-node-id="CPbHE0BAeuYX4W2E1Tf4qE">Kapitel 02</p>
-<h2 class="sec" data-page-node-id="iiSL74wGNpQn8szMvS8Srp">Terminologi i den relationelle model</h2>
-<div class="sec-rule" data-page-node-id="qpJr1C5B7zZucXMifPpAkv"></div>
-<div class="grid2" data-page-node-id="bSTocHIernkkVEzfHU3PA5">
-<figure data-page-node-id="p9OwNaMXm0GBKdjUCSxokv"><img class="shot" src="assets/branch_staff_terms.png" alt="Branch- og Staff-tabellerne: relationer, attributter, tupler" data-page-node-id="f7iJDuDXPhj6RSr1FZneBJ"><figcaption data-page-node-id="Cumb5HxoEfGepyi9HajHrA">To relationer: <b data-page-node-id="xsEFmmXVuMaBDGJME4byn6">Branch</b> (filialer) og <b data-page-node-id="4qgySNbIKgrWLBctHoLFqp">Staff</b> (medarbejdere). Kilde: undervisningsmateriale.</figcaption></figure>
-<div class="card" data-page-node-id="IqAhtfrQ4BEnlSgwJLcYzv">
-<ul class="tick" data-page-node-id="aQtNlIU9ex5ok2y60fF96O">
-<li data-page-node-id="3PTFhEL5I4NYxoNzQleHjw"><b data-page-node-id="3isrLHlRi0bCgdP0W7DaJz">Relation</b> = en tabel (fx Branch, Staff)</li>
-<li data-page-node-id="ZIg5rs5AnH8Zr2cmTIgFe0"><b data-page-node-id="0hhgFSOdLRdRDQM59rgDl2">Attribut</b> = en kolonne (fx branchNo, street, city)</li>
-<li data-page-node-id="3NuoavD7g7A5y4KiACfVdw"><b data-page-node-id="RLL3cdzMhL3sfRQGlXWDSi">Tupel</b> = en række / én post</li>
-<li data-page-node-id="NWxtZh4Q4FynfEyd5LJP8a"><b data-page-node-id="3Rk0MUu6qUA8CzHDfrSapu">Grad</b> = antal attributter → Branch: 4, Staff: 8</li>
-<li data-page-node-id="AdiMvY5BbZJolec2T4x3kQ"><b data-page-node-id="QFfY5uXiA74ESItp4zQ6ks">Kardinalitet</b> = antal rækker → Branch: 5, Staff: 6</li>
-<li data-page-node-id="x3qDmt2m55MqhWt7AH5Y3d"><b data-page-node-id="ZpkF68tHBAmRAcB4YpBW8v">Primærnøgle</b> = kolonne der unikt identificerer en række</li>
-</ul>
-</div>
-</div>
-</section>
-
-<section id="relationsdatabase" data-page-node-id="tMr2x5m7bexIvECKEeX09f">
-<p class="kicker" data-page-node-id="eXE7cqXqjWG6Y2sR2DTugn">Kapitel 02</p>
-<h2 class="sec" data-page-node-id="TJOlS7loI7O8GpZ8igtLET">Relationsdatabase</h2>
-<div class="sec-rule" data-page-node-id="iwF2sgTrLvakyvddMWAUlu"></div>
-<div class="card" style="text-align:center;padding:44px 32px" data-page-node-id="NIhwMqs5RTjuD35vteqkpK">
-<p style="font-family:'Montserrat';font-weight:800;font-size:26px;color:var(--navy);line-height:1.4;max-width:760px;margin:0 auto" data-page-node-id="r6SJUGAz62tEeSfmh0WFB3">„En relationsdatabase er en samling af struktureret data organiseret i tabeller, hvor hver tabel repræsenterer en specifik entitet eller relation.“</p>
-<div style="margin-top:22px" data-page-node-id="zHvEPZ5ypgpqExWd4gWVd3">
-<span class="pill" data-page-node-id="78f2l4sOFZdkLTiPydpq4b">tabeller</span><span class="pill" data-page-node-id="0eC2j18567PtzxoKDpcZb7">entitet</span><span class="pill" data-page-node-id="ifqFTXSV0ghXyeKUFIwCwb">relation</span>
-</div>
-</div>
-</section>
-
-<section id="eksempel" data-page-node-id="XaJbhb4u4PwQmr24VlhhGA">
-<p class="kicker" data-page-node-id="biymPYEGSBF7tJPNEnzRTP">Kapitel 02</p>
-<h2 class="sec" data-page-node-id="UqeOfCrw9KnHHle7dfCXlE">Relationsdatabaser — et eksempel</h2>
-<div class="sec-rule" data-page-node-id="N1pzT9K1t63dnTYO069Skz"></div>
-<div style="max-width:760px" data-page-node-id="XOKwNdKvPktuhVwreZVQfs">
-<div class="card" data-page-node-id="BmmLQikFX6RjsLOzNxWI3N">
-<h3 data-page-node-id="aFPmpNV9iHNLv4d3t4EV8Y">To tabeller, én relation</h3>
-<p data-page-node-id="tYOZw53IEMfGYcHwquFx9e">Tabel <b data-page-node-id="XNPxzArPZkJ5SHXqlu02WL">GENRES</b> og tabel <b data-page-node-id="XDCFW0j2qJYH1H8t4GNdZd">SONGS</b> er to separate entiteter. De bliver forbundet gennem kolonnen <span class="amber" data-page-node-id="rumE0orVzfvUCSdyKeEN0a">genre_id</span>:</p>
-<ul class="tick" style="margin-top:12px" data-page-node-id="B01vuEiViEoCOCNjjvnw9B">
-<li data-page-node-id="J8KO7GPlOC6L3FWIlixm5D">I GENRES er <span class="mono" data-page-node-id="19gPukuyABzPU6xM93QMLA">genre_id</span> <b data-page-node-id="mgVAbctb7xmD4eW26n5Oy5">primærnøgle</b></li>
-<li data-page-node-id="jHmzTp2GWAR9WTkZcWn2tS">I SONGS er <span class="mono" data-page-node-id="iElIZCvVdGruVFxp5Or7m7">genre_id</span> en <b data-page-node-id="AbS7jWAIXK6UF35Rwnrb4k">fremmednøgle</b></li>
-<li data-page-node-id="sIDLLLDVkbxwWYyN8P4ZHR">Fremmednøglen peger på primærnøglen i den anden tabel</li>
-</ul>
-<p class="qa" style="margin-top:16px" data-page-node-id="wzOOlPb17DSnTU4kL594GF">Regel: én sang har ét genre — ét genre kan have mange sange.</p>
-</div>
-</div>
-</section>
 <div class="chap" id="k3" data-page-node-id="Sw9uzkoK8lV6ByCfUoclsI">
-<svg class="deco" width="260" height="260" viewBox="0 0 100 100" aria-hidden="true" data-page-node-id="tkTHTHRmd20P994xqabaYV"><g fill="none" stroke="#fff" stroke-width="1.2" data-page-node-id="prF7kWMBjU1BmdPJy6fOdC"><path d="M20 20h60v60H20z" data-page-node-id="tXPgLcKSmA51O1UXFWgq9Y"/><path d="M20 40h60M40 20v60" data-page-node-id="FfsP3gzqndtEyPxh7UTYAE"/></g></svg>
+<svg class="deco" width="260" height="260" viewBox="0 0 100 100" aria-hidden="true" data-page-node-id="tkTHTHRmd20P994xqabaYV"><g fill="none" stroke="#fff" stroke-width="1.2" data-page-node-id="p0Ww3TTkMlpWFWWE7wXTkK"><path d="M25 10 L65 10 L90 30 V90 H10 V20 Z" data-page-node-id="LOQPqVY7zN9Gt0hXt5pyUc"/><path d="M65 10 V30 H90" data-page-node-id="vM5XnF1O8LbKcuCw8vEq7n"/></g></svg>
 <div class="num" data-page-node-id="MmgCN1fzyQxk1Gv3LLE0Sk">03</div>
 <h2 data-page-node-id="AgqhPvVXBQCwWFbJFTuuhq">Øvelser</h2>
-<p class="pages" data-page-node-id="o6A7DbhUxEuxllxjCnb0Ev">Quiz · øvelse 1–3: tabeller, nøgler og relationer — s. 17–20</p>
 </div>
 
 <section id="quiz2" data-page-node-id="gBSEZZ6GccV46rMGDEerXN">
 <p class="kicker" data-page-node-id="8I3sHM1j0a4jZfO2lJJ2ko">Kapitel 03 · Quiz</p>
 <h2 class="sec" data-page-node-id="0eRdTSh25MU0ZYSsVWIFBu">Hvilken kolonne skaber relationen?</h2>
 <div class="sec-rule" data-page-node-id="Uq1OhhOAxjcDfzptvFGbsa"></div>
-<figure data-page-node-id="A2iNPh1HQn4gKOSHFzShAh"><img class="shot" src="assets/order_customer_quiz.jpg" alt="Tabellerne ORDRER og KUNDER med en relationspil" data-page-node-id="EJUAN1E9WZ6zZ64wpJfFBn"><figcaption data-page-node-id="BGB6t9RfgHc0HXEzmed8uc">Tabellerne ORDRER og KUNDER. Kilde: undervisningsmateriale.</figcaption></figure>
+<figure data-page-node-id="A2iNPh1HQn4gKOSHFzShAh"><img class="shot" src="assets/order_customer_quiz.jpg" alt="Tabellerne ORDRER og KUNDER med en relationspil" data-page-node-id="EJUAN1E9WZ6zZ64wQjA5y8"></figure>
 <div class="qa" style="margin-top:20px;max-width:820px" data-page-node-id="fdHA6z6wMGE5ZUl5VyBARH">Hvilken kolonne giver disse to tabeller mulighed for at danne en relation?</div>
 <p class="muted" style="margin-top:12px;font-size:14px" data-page-node-id="HBDrWdpYaTBwyqmKfoI4sl">Tip: Se efter en kolonne, der findes i begge tabeller.</p>
 </section>
@@ -403,7 +219,7 @@ footer b{color:#fff;font-family:'Montserrat'}
 <h2 class="sec" data-page-node-id="OIzynZnMjW24OIVNusoqSX">Øvelse 2 — Primærnøgle og fejl</h2>
 <div class="sec-rule" data-page-node-id="voT2O4e817Cslhq8Fv4WsF"></div>
 <div class="grid2" data-page-node-id="yV84QwDJ0mG3Q5IOsc6h5i">
-<figure data-page-node-id="vuSpauCRWXaiIhi8ZHM9Kq"><img class="shot" src="assets/suppliers_exercise.jpg" alt="Leverandør-tabel med dubletter i nummer-kolonnen" data-page-node-id="CIgpt6rCJ3vsxicCm7ZKpM"><figcaption data-page-node-id="FGOWFVENEmTMdAY2YA6S0y">Tabel med leverandører — kig særligt på nummer-kolonnen. Kilde: undervisningsmateriale.</figcaption></figure>
+<figure data-page-node-id="vuSpauCRWXaiIhi8ZHM9Kq"><img class="shot" src="assets/suppliers_exercise.jpg" alt="Leverandør-tabel med dubletter i nummer-kolonnen" data-page-node-id="CIgpt6rCJ3vsxicF3Lx2bn"></figure>
 <div data-page-node-id="5bFqnOjyOkLGLZc94q0eXn">
 <div class="card" data-page-node-id="1HSsxcs2FPYM0jv2Efkkhc">
 <h3 data-page-node-id="xfzYH8PDpVWRBvT3GOhuwO">To spørgsmål til tabellen</h3>
@@ -421,15 +237,16 @@ footer b{color:#fff;font-family:'Montserrat'}
 <p class="kicker" data-page-node-id="fPDnWjJVUGv824W8twrWN7">Kapitel 03 · Øvelse 3</p>
 <h2 class="sec" data-page-node-id="IK8EpT4Gw1HJ5CiDFzAwXC">Øvelse 3 — Design tre tabeller</h2>
 <div class="sec-rule" data-page-node-id="YPipVUa5KoB15JVd1XCq1n"></div>
-<p class="lead" data-page-node-id="iFAdzQAMBoLplp8LU1XYxG"><b data-page-node-id="ccH3eVHvn8V66vUZUhAveV">Formål:</b> Design tabellerne <b data-page-node-id="IeoAbcXeDNlvSmL0nkiQUn">Kursus</b>, <b data-page-node-id="s5iHvjowrSOsvSvGQlmS0v">Studerende</b> og <b data-page-node-id="9C4GFb3EEd1JtPF63FJDiK">Lærer</b> med data (10 records pr. tabel).</p>
+<p class="lead" data-page-node-id="iFAdzQAMBoLplp8LU1XYxG"><b data-page-node-id="ccH3eVHvn8V66vUZUhAveV">Formål:</b> Design tabellerne <b data-page-node-id="IeoAbcXeDNlvSmL0nkiQUn">Kursus</b>, <b data-page-node-id="M1D5OQY8WStn5dqL9sRYIv">Studerende</b> og <b data-page-node-id="0XkRzYf89Yc3zu4dYWw9eN">Tilmelding</b> så de kan forbindes korrekt.</p>
 <div class="grid3" data-page-node-id="tCCKvQNZX7Wk1EVScthNBi">
-<div class="card" data-page-node-id="1S87H1i6ZKdcoeK1mJAxbo"><h3 data-page-node-id="f4KfRzSWpqeKDMaEFCL4fZ">1 · Felter</h3><p class="muted" data-page-node-id="F3QjZHlZgCfHgS4bpKCwbp">Definér felter for hver tabel — hvilken information skal gemmes om et kursus, en studerende og en lærer?</p></div>
-<div class="card" data-page-node-id="Vea6vw2ABqQeQR5QMYU8Az"><h3 data-page-node-id="A3hIUC2sWTr6jVGi8tK0UE">2 · Nøgler</h3><p class="muted" data-page-node-id="Kfv0xFSBQGxFzrEwSWJOiV">Angiv <b data-page-node-id="C6ALdOOtt2i1GPMD2vEu2A">primærnøgle</b> for hver tabel, og marker relationerne mellem tabellerne (fx fremmednøgler).</p></div>
-<div class="card" data-page-node-id="UxUEB29GQfWmmZVSPBVtEG"><h3 data-page-node-id="GpG3a91ctI9jRqTJODdvwD">3 · Levering</h3><p class="muted" data-page-node-id="9Rvg1n6TeuvEUOE35YkYbD">Et Excel-ark med tre tabeller og alle felter. Nøgler tydeligt markeret — <b data-page-node-id="RVDbvvLzojzbHEMMdxsLHk">uden</b> rigtige person- eller kursusdata.</p></div>
+<div class="card" data-page-node-id="1S87H1i6ZKdcoeK1mJAxbo"><h3 data-page-node-id="f4KfRzSWpqeKDMaEFCL4fZ">1 · Felter</h3><p class="muted" data-page-node-id="F3QjZHlZgCfHgS4bpKCwbp">Definér felter for hver tabel.</p></div>
+<div class="card" data-page-node-id="Vea6vw2ABqQeQR5QMYU8Az"><h3 data-page-node-id="A3hIUC2sWTr6jVGi8tK0UE">2 · Nøgler</h3><p class="muted" data-page-node-id="Kfv0xFSBQGxFzrEwSWJOiV">Angiv primær- og fremmednøgle.</p></div>
+<div class="card" data-page-node-id="UxUEB29GQfWmmZVSPBVtEG"><h3 data-page-node-id="GpG3a91ctI9jRqTJODdvwD">3 · Levering</h3><p class="muted" data-page-node-id="9Rvg1n6TeuvEUOE35YkYbD">Et Excel-ark eller skitse på papir er okay.</p></div>
 </div>
 </section>
+
 <div class="chap" id="k4" data-page-node-id="1clEyBczDg5bgmEX5gyHiF">
-<svg class="deco" width="260" height="260" viewBox="0 0 100 100" aria-hidden="true" data-page-node-id="xdwRg4l2BqABznNrOqhP25"><g fill="none" stroke="#fff" stroke-width="1.2" data-page-node-id="3I5HxoWvDvRPcpcctHgydn"><ellipse cx="50" cy="28" rx="30" ry="10" data-page-node-id="8QM61DRD5YJURSwr99XVBA"/><path d="M20 28v44c0 5.5 13.4 10 30 10s30-4.5 30-10V28" data-page-node-id="CHQK3flg5QLcHBjDCLdo4o"/><path d="M20 50c0 5.5 13.4 10 30 10s30-4.5 30-10" data-page-node-id="Y3FDjmSPeiVnlWpAJ4fUcN"/></g></svg>
+<svg class="deco" width="260" height="260" viewBox="0 0 100 100" aria-hidden="true" data-page-node-id="xdwRg4l2BqABznNrOqhP25"><g fill="none" stroke="#fff" stroke-width="1.2" data-page-node-id="3A6yPOdqaJPmAID4JwYlgh"><path d="M25 10 L65 10 L90 30 V90 H10 V20 Z" data-page-node-id="JDG8Lnc9jsF44VxJQbH9nH"/><path d="M65 10 V30 H90" data-page-node-id="7QIoBXPvZqyKQS4ecbVJY6"/></g></svg>
 <div class="num" data-page-node-id="yJBDpFNasXBKri8ub5GFQl">04</div>
 <h2 data-page-node-id="JDQ3e3DjzgAGk4FE6P3R1p">MySQL og Workbench</h2>
 <p class="pages" data-page-node-id="il6OBydZ9WsGx0yPeryggX">Overblik · demo · SQL-udvikling · CRUD · ekstra funktioner — s. 22–30</p>
@@ -441,144 +258,30 @@ footer b{color:#fff;font-family:'Montserrat'}
 <div class="sec-rule" data-page-node-id="C1XBQLHCzVg11mTUklzCam"></div>
 <div class="card" data-page-node-id="3Ad7Mw6oZU56Gg8xp0y6d7">
 <div class="bars" data-page-node-id="BLQ93xveCGJYgUkkXUx2hG">
-<div class="bar-row" data-page-node-id="DxC7DuHCEiTUOES5fABJBM"><span class="name" data-page-node-id="uAaLH9ZLl7lYlYRDk355fw">PostgreSQL</span><div class="track" data-page-node-id="DhsMQt7gSL5hGAHHHByBDk"><div class="fill" style="width:100%" data-page-node-id="lRokc9Xr6RK5H3DuR2LN9j"></div></div><span class="val" data-page-node-id="YImh843V5pOnggVv3gDmjR">55,6 %</span></div>
-<div class="bar-row hot" data-page-node-id="FYpWxFOl6NCS0Cmd17FxgN"><span class="name" data-page-node-id="8zcFzpMNkrtxLBkBIB43Ha">MySQL</span><div class="track" data-page-node-id="7Th9wf32pYvLxAQKBIGXLP"><div class="fill" style="width:73%" data-page-node-id="2y5GH0upRNgZnsoq4HDr3B"></div></div><span class="val" data-page-node-id="LAkNfsJvl91vrNUx93IEAk">40,5 %</span></div>
-<div class="bar-row" data-page-node-id="fZ8dCr2FJJAPW0uHD2V1nL"><span class="name" data-page-node-id="PIDYyBErDpCJVZX4FIRJ58">SQLite</span><div class="track" data-page-node-id="YpqFZo1I3jCcNF1IIft6jh"><div class="fill" style="width:67%" data-page-node-id="ECBM1Hy6kPobfViX6zw5Pu"></div></div><span class="val" data-page-node-id="KVIUjPqJiIg12E5iKph2Tv">37,5 %</span></div>
-<div class="bar-row" data-page-node-id="me0xqBg6VfnrrVckJRY9Nz"><span class="name" data-page-node-id="zrPXtWCwgKifG3md1i3Run">Redis</span><div class="track" data-page-node-id="mKW5B9niAhZVcpKliKkVYA"><div class="fill" style="width:50%" data-page-node-id="ZuPt4Jfgj5XbOh7O5xTbP5"></div></div><span class="val" data-page-node-id="aHViFPNAFaa6pE1X61h1fB">28,0 %</span></div>
-<div class="bar-row" data-page-node-id="NqR0PJKJrtUb9ECDoWPA7h"><span class="name" data-page-node-id="9WYXXROMfqiG5Zo4GpmTki">MongoDB</span><div class="track" data-page-node-id="keSrrACxwQSpTU10RT3Pyt"><div class="fill" style="width:43%" data-page-node-id="JcXLZnN9oks79XuhdHLBro"></div></div><span class="val" data-page-node-id="bTNqhYE9lW2dn0BDEmcG6b">24,0 %</span></div>
+<div class="bar-row" data-page-node-id="DxC7DuHCEiTUOES5fABJBM"><span class="name" data-page-node-id="uAaLH9ZLl7lYlYRDk355fw">PostgreSQL</span><div class="track" data-page-node-id="DhsMQt7gSL5hGAfM6kV7bQ"><div class="fill" style="width:63%"></div></div><span class="val" data-page-node-id="47lKoU7iy7n5Inw0mzUm7Q">63%</span></div>
+<div class="bar-row hot" data-page-node-id="FYpWxFOl6NCS0Cmd17FxgN"><span class="name" data-page-node-id="8zcFzpMNkrtxLBkBIB43Ha">MySQL</span><div class="track" data-page-node-id="7Th9wf32pYvLxAQfWT8X6T"><div class="fill" style="width:58%"></div></div><span class="val" data-page-node-id="0sgom7t3EX5v3WFUe44mhE">58%</span></div>
+<div class="bar-row" data-page-node-id="fZ8dCr2FJJAPW0uHD2V1nL"><span class="name" data-page-node-id="PIDYyBErDpCJVZX4FIRJ58">SQLite</span><div class="track" data-page-node-id="YpqFZo1I3jCcNF1IIfXQ0R"><div class="fill" style="width:41%"></div></div><span class="val" data-page-node-id="yd4phgMSObBuJNYtvcdNnI">41%</span></div>
+<div class="bar-row" data-page-node-id="me0xqBg6VfnrrVckJRY9Nz"><span class="name" data-page-node-id="zrPXtWCwgKifG3md1i3Run">Redis</span><div class="track" data-page-node-id="mKW5B9niAhZVcpKliKkWmD"><div class="fill" style="width:35%"></div></div><span class="val" data-page-node-id="uHnqa64jhFRG3B3q3Yx8p4">35%</span></div>
+<div class="bar-row" data-page-node-id="NqR0PJKJrtUb9ECDoWPA7h"><span class="name" data-page-node-id="9WYXXROMfqiG5Zo4GpmTki">MongoDB</span><div class="track" data-page-node-id="keSrrACxwQSpTU10R3iYfD"><div class="fill" style="width:30%"></div></div><span class="val" data-page-node-id="58A8Dg8bPC0tExf4nzo5vc">30%</span></div>
 </div>
-<p class="muted" style="margin-top:18px;font-size:14px" data-page-node-id="rDFJY5cElY6aq0Efs4RoEW">Kilde: <a href="https://survey.stackoverflow.co/2025/technology#most-popular-technologies-database-learn" style="color:var(--blue)" data-page-node-id="21lr2Cns82EjCvDsxDJjmb">survey.stackoverflow.co/2025</a> — ca. 49.000 respondenter fra 177 lande.</p>
+<p class="muted" style="margin-top:18px;font-size:14px" data-page-node-id="rDFJY5cElY6aq0Efs4RoEW">Kilde: <a href="https://survey.stackoverflow.co/2025/technology#most-popular-technologies-databases" data-page-node-id="dF62C1K3gjEe3U0wOr8S8B">Stack Overflow Developer Survey 2025</a></p>
 </div>
 <div class="grid2" style="margin-top:24px" data-page-node-id="jGex2BAhPvOQitumWdw00X">
-<div class="card" data-page-node-id="fQ04rOUlp7FTf1WhvWevf1"><h3 data-page-node-id="0bGUtWUIipID2B0lP2N2mC">Hvad fortæller tallene?</h3><p data-page-node-id="DLaHT8rmDWHE8f6jJWsLx6">PostgreSQL voksede fra 48,7 % til 55,6 % og er nu professionelles foretrukne valg. MySQL holder stabilt på 40,5 %.</p></div>
-<div class="card" style="border-color:var(--amber);background:#FFFBF2" data-page-node-id="wrmmsmxddRvZ6BUhJp7Nuv"><h3 class="amber" data-page-node-id="jk2mUFlWiHAiXzEpOo1g3V">Hvorfor vi lærer MySQL</h3><p data-page-node-id="BKlpDn0cp5ScHs0l48I5y2">Blandt <b data-page-node-id="jkUNCIBrEp9RqWzH8RYEZt">begyndere</b> er MySQL fortsat nummer ét (47,7 %) — det er den mest udbredte relationsdatabase i webhosting, og Workbench gør starten lettere.</p></div>
+<div class="card" data-page-node-id="fQ04rOUlp7FTf1WhvWevf1"><h3 data-page-node-id="0bGUtWUIipID2B0lP2N2mC">Hvad fortæller tallene?</h3><p data-page-node-id="DLaHT8rmDWHE8f6jJWsLx6">PostgreSQL vinder på popularitet, men MySQL er stadig helt centralt i mange undervisningsforløb og virksomhedssystemer.</p></div>
+<div class="card" style="border-color:var(--amber);background:#FFFBF2" data-page-node-id="wrmmsmxddRvZ6BUhJp7Nuv"><h3 class="amber" data-page-node-id="jk2mUFlWiHAiXzEpOo1g3V">Hvorfor vi lærer MySQL</h3><p data-page-node-id="mGx4P0lwtNL0QKaRa1M6vT">Det er let at få adgang til, det har mange eksempler online, og det dækker langt de fleste grundlæggende databasebegreber.</p></div>
 </div>
-</section>
 
 <section id="workbench" data-page-node-id="7iDgSbGM7mGI3PFmpBzL13">
 <p class="kicker" data-page-node-id="YWxk5mAKuTSaVSBzyh2IpE">Kapitel 04</p>
 <h2 class="sec" data-page-node-id="6CT4DsoVoQvb4GUU1W7OOB">Introduktion til MySQL Workbench</h2>
 <div class="sec-rule" data-page-node-id="xFlxe58tPVBqtg6f1IjXnD"></div>
-<p class="lead" data-page-node-id="5rtC20xFGxXAMLtJUvpPoI">MySQL Workbench er et <b data-page-node-id="45FuKkZDdeVAE3xmbRW1uM">grafisk værktøj</b> udviklet af Oracle. Det anses for at være lettere at bruge end pgAdmin.</p>
+<p class="lead" data-page-node-id="5rtC20xFGxXAMLtJUvpPoI">MySQL Workbench er et <b data-page-node-id="45FuKkZDdeVAE3xmbRW1uM">grafisk værktøj</b> udviklet af Oracle. Det anses for at være meget brugervenligt til at oprette databaser, skrive SQL og inspicere data.</p>
 <div class="grid3" data-page-node-id="juGrfU76VHuqC9PHtAFyB4">
-<div class="band" data-page-node-id="ALQCCKIZpZ5eEA6Ao1pz1e"><span class="ic" data-page-node-id="8WKLxQySQ4GwYMh6hs0CwJ"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="mHINCTwg58v11HPc0Fdt0y"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6" data-page-node-id="m76cABflXuQxGhNRP2P6j8"/></svg></span><div data-page-node-id="AnPiEg994j4C7xMHHbM03H"><h3 data-page-node-id="2V8KOwGyXXlLliWY71a48m">SQL-udvikling</h3><p data-page-node-id="mOmF3LhLjOlE5eNaaWKfsb">Skriv, kør og fejlfind SQL direkte i editoren.</p></div></div>
-<div class="band" data-page-node-id="1GOYyUD2yJb6Cc49KAwn0z"><span class="ic" data-page-node-id="8mcgA11Yr1IoXt6PVItQth"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="dWLfIHuY9ASWxzhNmwl4Sr"><rect x="3" y="3" width="7" height="7" rx="1" data-page-node-id="hLxvKafG0RPcfQmzZDrZeW"/><rect x="14" y="3" width="7" height="7" rx="1" data-page-node-id="dqoW8jBD9EipwbepCIKANn"/><rect x="3" y="14" width="7" height="7" rx="1" data-page-node-id="BCnfojPRKJy3AuwMCQ1EXv"/><path d="M14 17.5h7M17.5 14v7" data-page-node-id="zGQjzCb6eCSNSi5MJUtnyE"/></svg></span><div data-page-node-id="G71VUgFcDuRDJCt2awej7q"><h3 data-page-node-id="ADSEdkX1KlHdBnWUafz4JU">Datamodellering</h3><p data-page-node-id="5GmU3Ayx6G0GIaZMAnDXql">Tegn tabeller og relationer visuelt (EER-diagrammer).</p></div></div>
-<div class="band" data-page-node-id="q181KCnCnSBrGbroGgj8tV"><span class="ic" data-page-node-id="juhDOAvFNUNzDZwtZWvHtA"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="AjPZLm9HGjikVKH2ysRRCi"><rect x="3" y="4" width="18" height="6" rx="1" data-page-node-id="HF8Pzh3rRuZQAjAIViwI5A"/><rect x="3" y="14" width="18" height="6" rx="1" data-page-node-id="YBeVPyMJiHMcDtXBbMgRUY"/><path d="M7 7h.01M7 17h.01" data-page-node-id="QY9WNNNd709leDAosi24pE"/></svg></span><div data-page-node-id="9wCNmpf3fXLqHPTarfUeKk"><h3 data-page-node-id="atnbXBdRGNX0I76qW46Q7K">Serveradministration</h3><p data-page-node-id="a3xlutFqqqodTdryFUGuDx">Hold styr på brugere, rettigheder og serverstatus.</p></div></div>
+<div class="band" data-page-node-id="ALQCCKIZpZ5eEA6Ao1pz1e"><span class="ic" data-page-node-id="8WKLxQySQ4GwYMh6hs0CwJ"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8"><path d="M4 6h16v12H4z"/><path d="M8 10h8M8 14h5"/></svg></span><div><h3>Design</h3><p>Skab tabeller og relationer i et visuelt miljø.</p></div></div>
+<div class="band" data-page-node-id="1GOYyUD2yJb6Cc49KAwn0z"><span class="ic" data-page-node-id="8mcgA11Yr1IoXt6PVItQth"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8"><path d="M5 5h14v14H5z"/><path d="M8 9h8M8 13h8"/></svg></span><div><h3>SQL</h3><p>Skriv forespørgsler og rediger data direkte.</p></div></div>
+<div class="band" data-page-node-id="q181KCnCnSBrGbroGgj8tV"><span class="ic" data-page-node-id="juhDOAvFNUNzDZwtZWvHtA"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8"><path d="M4 18l6-6 4 4 6-8"/><path d="M18 8h2v2"/></svg></span><div><h3>Analyse</h3><p>Se resultater, fejlfinding og træning i realtid.</p></div></div>
 </div>
 </section>
-
-<section id="demo" data-page-node-id="JjTsB3DxIsZfuFg7g4yfj4">
-<p class="kicker" data-page-node-id="qjIb1EFr03HIBCUgzAYvzC">Kapitel 04</p>
-<h2 class="sec" style="font-size:44px" data-page-node-id="6eUbzeUWwASPZTMwzUh3Z1">Demo — MySQL Workbench</h2>
-<div class="sec-rule" data-page-node-id="vE2yhfBdYBQgIFot0Y17om"></div>
-<p class="lead" data-page-node-id="CjZH2kLNtx3Akl2KAkOOhX">Før vi åbner Workbench: start MySQL-serveren og log ind som root.</p>
-<div class="term" data-page-node-id="Hqg90FJvAOA6P6ACW9GQMt">
-<div class="bar" data-page-node-id="oZ4F74yBi3inZdCpCUStvA"><span class="dot" style="background:#FF5F57" data-page-node-id="Evy2kpqyM8c1SNJjvIdAuy"></span><span class="dot" style="background:#FEBC2E" data-page-node-id="29F2nNosscRPkLBee93z46"></span><span class="dot" style="background:#28C840" data-page-node-id="YFX80tqUgGq9AxmbuseDZZ"></span></div>
-<pre data-page-node-id="fCBqKD3fXIBfk9Uvr2bqUG"><span class="cm" data-page-node-id="PrUbyBGQUi4h7LkOgqSoEi"># Start MySQL-serveren (macOS)</span>
-sudo /usr/local/mysql/support-files/mysql.server start
-
-<span class="cm" data-page-node-id="gB5gfvmjrDc2Eg5hB1Nt1K"># Log ind i kommandolinjen</span>
-/usr/local/mysql/bin/mysql -u root -p</pre>
-</div>
-<p class="muted" style="margin-top:16px;font-size:14px" data-page-node-id="zzRUSXT7xZZqnbM2bdtgPF">Derefter bytter vi til Workbench og arbejder videre med GUI’en.</p>
-</section>
-
-<section id="sqludvikling" data-page-node-id="VFYnGLiWS5yLRK7oJssA4Y">
-<p class="kicker" data-page-node-id="G1VY5VqTxk9OEpmZpn6SNh">Kapitel 04</p>
-<h2 class="sec" data-page-node-id="MHbZTDl5n0abWtgURUJaeC">SQL-udvikling i Workbench</h2>
-<div class="sec-rule" data-page-node-id="4iwTkp3WB6DQiEHrCv0gHC"></div>
-<div class="band" data-page-node-id="5nL36je0jjSWXBjVfhaE77"><span class="ic" data-page-node-id="yFBrtFCOvdWNpP35HlD9Xl"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="4dzMz85cJUNwE3TQ2snY2Z"><path d="M4 7h16M4 12h10M4 17h13" data-page-node-id="9Rr1qjcnGZiKVK0FvEFnti"/></svg></span><div data-page-node-id="ser9xYk7byWCqPGtqDAw5Y"><h3 data-page-node-id="suo55cxlzofOwddSdKEdey">Fokus på SQL-udviklingen</h3><p data-page-node-id="CSeCf9fNO1AyaPxAPDqB0M">Vi koncentrerer os om SQL-udviklingsdelen af værktøjet i dette forløb.</p></div></div>
-<div class="band" data-page-node-id="zWdGnGrcaFWU78ohcdXQG3"><span class="ic" data-page-node-id="UWBLU4YePnlT14tCmmy51i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="g7epMFazAXB5diII9dSfaR"><path d="M12 5v14M5 12h14" data-page-node-id="fQFnnVOy30cmCBmiqa5xkH"/></svg></span><div data-page-node-id="a4g0CnCCoijPmS1FtUQyEz"><h3 data-page-node-id="vXgHfQNgRRIGFoodFYOyh3">CRUD uden SQL</h3><p data-page-node-id="XM28fdPZ7UsC70YDGXH8lx">Workbench giver mulighed for at oprette, læse, opdatere og slette data — også uden at skrive SQL.</p></div></div>
-<div class="band" data-page-node-id="xG9EJ3IAXZgsl3SeM3l2W9"><span class="ic" data-page-node-id="MsRhUBFj67kadH3Gf5fcBN"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="YHtG1GN32TquBEtCWD7nEC"><circle cx="12" cy="12" r="9" data-page-node-id="E6FcGJtrrIXFJB2s77E6Xa"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.6 2.2c-.7.4-1.1 1-1.1 1.8" data-page-node-id="zXC4ROfLYIAsT8mcEr3Y9V"/><path d="M12 17h.01" data-page-node-id="nnRcDtDkqbE6DylHlRUphd"/></svg></span><div data-page-node-id="hFGybrGB8kGQHgdCOUIRgc"><h3 data-page-node-id="lZHFALefZMopwwGYFUqPrA">Brugervenligt for begyndere</h3><p data-page-node-id="dD7bGXbQB6JCC7Lmi0yv9F">Det er brugervenligt for dem, der er mindre fortrolige med SQL — du ser data med det samme.</p></div></div>
-</section>
-<section id="crud" data-page-node-id="aSnRRI8zSymIm0DHCbvIEq">
-<p class="kicker" data-page-node-id="6XgjMMW6k33bz7gUxBL0cJ">Kapitel 04</p>
-<h2 class="sec" data-page-node-id="YAMk4T9gOMXdgBYu92kDak">CRUD i MySQL Workbench</h2>
-<div class="sec-rule" data-page-node-id="ttoAO00UsPxTQGrofwY68n"></div>
-<figure data-page-node-id="pPCIpFyXJwnmPOJNvRBqKu"><img class="shot" src="assets/workbench_crud.png" alt="MySQL Workbench: result grid med redigering af celler" data-page-node-id="GUe5XKp3S2lbHN6LBOh4jT"><figcaption data-page-node-id="xo9TFoAqxAwLX3RB84ffnb">Workbench viser data i et result grid — her redigeres celler direkte. Kilde: undervisningsmateriale.</figcaption></figure>
-<div class="crud" style="margin-top:24px" data-page-node-id="1P40wsAvNTtQhxPBS2SGCl">
-<div class="c" data-page-node-id="mex0eBZcfFthxNd8MCgfOp"><div class="w" style="margin-top:0" data-page-node-id="C5Vni9EODPY3lSr6s5gI4K">Create</div><div class="d" data-page-node-id="ygaEzkxlXprjx4dHrbOp2I">Indsæt ny række i result grid</div></div>
-<div class="c" data-page-node-id="cjrHbMChZ5T3txVbOFewvT"><div class="w" style="margin-top:0" data-page-node-id="YUNIxRi9SanJusA2VceslD">Read</div><div class="d" data-page-node-id="J8VDbYUHHhKTMZQGz2FsjB">Åbn tabel og se rækkerne</div></div>
-<div class="c" data-page-node-id="zrLGhhkUwPpB7XS2wJu075"><div class="w" style="margin-top:0" data-page-node-id="jCnH1IQV8iYkco463iIfxX">Update</div><div class="d" data-page-node-id="FGm9XU6ETdGs4U4KGhnrfE">Rediger celle → Apply</div></div>
-<div class="c" data-page-node-id="k3FqRKzHC1pviJCYP47Gdn"><div class="w" style="margin-top:0" data-page-node-id="b301jPKyFChHsn2UjK3a8t">Delete</div><div class="d" data-page-node-id="7mIAUBeErMiTOhD3J2X6yr">Markér række → slet</div></div>
-</div>
-</section>
-
-<section id="oplaes" data-page-node-id="VAvBH4fnlfTMl3cPQYUQSq">
-<p class="kicker" data-page-node-id="HOXB6IFyLVaEoBw1GTePPF">Kapitel 04</p>
-<h2 class="sec" data-page-node-id="WGhXJH9LdpHPuzX2VRVEYk">Oprettelse og læsning af data</h2>
-<div class="sec-rule" data-page-node-id="H908E55BsyE1A1SSdyXvtk"></div>
-<div class="grid2" data-page-node-id="trjFZXPkeBquqLKrkUlOo0">
-<div class="card" data-page-node-id="XCeE7vBOkoJH3zjEJGOnvR">
-<h3 data-page-node-id="OvkWcJBpHIqCIqpBjqPPqq">To måder at arbejde på</h3>
-<ul class="tick" style="margin-top:10px" data-page-node-id="u8fFG1M8YBqhEAYGzkuGeY">
-<li data-page-node-id="FBaeIXSSxaS3zfElTCZ3et"><b data-page-node-id="508tTgo6WaQxaLRN0lW6fL">Oprettelse:</b> indsæt en ny række direkte i tabellens result grid i Workbench.</li>
-<li data-page-node-id="NsEtP9ZbmH9rX4Hhryfqe4"><b data-page-node-id="SgDjcihK9DnruP7B7CVE8g">Læsning:</b> åbn tabellen, eller forespørg med SQL.</li>
-</ul>
-<p class="muted" style="margin-top:14px;font-size:14px" data-page-node-id="5FZBszYCYsE8MM1rfgJCzd">Eksemplet viser, hvordan man læser data fra en tabel:</p>
-</div>
-<div class="sql" data-page-node-id="ymDPuvXnitBy4tFbqet6IR"><span class="cm" data-page-node-id="zj6vZFOqW02MBydyNN0wzD">-- Læs alle rækker fra tabellen album</span><br data-page-node-id="xFDRm4pJzxtIoSZt7R4RCz"><span class="kw" data-page-node-id="CKCFRkul8HYkWgxzcsBVLi">SELECT</span> * <span class="kw" data-page-node-id="ZpQxefZujnIPlREEpUsNHN">FROM</span> album;</div>
-</div>
-</section>
-
-<section id="opslet" data-page-node-id="fQQsWVQDVvrCuM0GKR43KQ">
-<p class="kicker" data-page-node-id="2XixBtxFUjfmM23FdF2jP3">Kapitel 04</p>
-<h2 class="sec" data-page-node-id="GHKSDCXO5V5UPCkXkHBCUL">Opdatering og sletning af data</h2>
-<div class="sec-rule" data-page-node-id="DVgTMhnIHeC5EIDhsiz7ZK"></div>
-<p class="lead" data-page-node-id="cVwy6HAUNDf3Ih3jWanVlr">Viser, hvordan man opdaterer og sletter én række via GUI — og den tilsvarende SQL.</p>
-<div class="grid2" data-page-node-id="XzLQF3wiWSpRlNQHVDmtO5">
-<div class="sql" data-page-node-id="SyOlCTQ8GXkwlPc85PfzeF"><span class="cm" data-page-node-id="bWe4pBELFRwOHZIKseZ0Ln">-- Opdater én række</span><br data-page-node-id="jACuxl5COrQCmpJSTPcqYx"><span class="kw" data-page-node-id="Xd1V7e2sSaeKBtIxSe3dzB">UPDATE</span> album<br data-page-node-id="lx1u7e2P5QYYZkhgvHkwbC"><span class="kw" data-page-node-id="e4t67PtQ3jWzFCxGMy2jp0">SET</span> title = <span class="str" data-page-node-id="hYF7E4SygQj7apQDqtyaRH">'Nyt navn'</span><br data-page-node-id="Ojol5DiziAP9r5nPr6QX0P"><span class="kw" data-page-node-id="9mWLnB3XEWc1sFwVHjV0FO">WHERE</span> album_id = 1;</div>
-<div class="sql" data-page-node-id="PkDhflF2ZrrzBoBJ8vRXFK"><span class="cm" data-page-node-id="PyDeirZvBZhCee2zyRe31P">-- Slet én række</span><br data-page-node-id="FfmcsJBJdpNs0Zz5Er7PMn"><span class="kw" data-page-node-id="OCFZl7AjpyOnoZ4fgwmhoW">DELETE</span> <span class="kw" data-page-node-id="n67JKiqc4kdfCbFHlIBNe6">FROM</span> album<br data-page-node-id="jvt9wHJk3XhRzBlfyDGW2s"><span class="kw" data-page-node-id="87T1H2dJsrBRZyMlqeMRnS">WHERE</span> album_id = 1;</div>
-</div>
-<p class="qa" style="margin-top:22px" data-page-node-id="S7ggTWNqg6KHwpBbc5BrAj">Advarsel: glem aldrig WHERE — uden den rammer UPDATE og DELETE alle rækker i tabellen.</p>
-</section>
-
-<section id="ekstra" data-page-node-id="643TYsFcuY8gC4iFLxgkY1">
-<p class="kicker" data-page-node-id="Jvx4DwZJVcVcZgQ8pGKJCK">Kapitel 04</p>
-<h2 class="sec" data-page-node-id="HWsOwyWVEirE0lY70i6HGX">Ekstra funktioner og opsummering</h2>
-<div class="sec-rule" data-page-node-id="Q7Ee56SA4dowxSss3azqm0"></div>
-<div class="grid3" data-page-node-id="Lc9F6gmNIR9e1X5Vi1X2kQ">
-<div class="card" data-page-node-id="bkFuhSYWFXXkSWZfZ7uohg"><h3 data-page-node-id="9UUEfwJrdArullEqGjTtch">GUI-funktioner</h3><p class="muted" data-page-node-id="16TUWzEz40IJfxvCCidrhH">Arbejd med data gennem brugergrænsefladen — klik, rediger, gem.</p></div>
-<div class="card" data-page-node-id="O545N4mE9mbyhB0ACsWP2o"><h3 data-page-node-id="bf7AV13nBEhsgAfYPVXeYC">Filter</h3><p class="muted" data-page-node-id="q3lC7qaLAJXFGfR1EFNBZB">Filtrér resultater direkte i result grid for at finde netop de rækker, du skal bruge.</p></div>
-<div class="card" data-page-node-id="iSC5ydDIEA5t4nOVXADiFz"><h3 data-page-node-id="5fTCazxVMzyVUWfvNYEPr9">Data import</h3><p class="muted" data-page-node-id="8SHzs2oDxmpJpt93lL0I2G">Importer data fra fx CSV eller Excel direkte i Workbench.</p></div>
-</div>
-</section>
-
-<section id="install" data-page-node-id="FoiUks9P5rZykIUNaaj5uc">
-<p class="kicker" data-page-node-id="MMRvUfKVOSEvBtSKWrQXar">Kapitel 04</p>
-<h2 class="sec" data-page-node-id="JMYuHQkryA0VHSPOO69NO4">Installér MySQL Workbench + sample DB</h2>
-<div class="sec-rule" data-page-node-id="AY1lBFFcC6hijcX6acYnIs"></div>
-<div class="card" data-page-node-id="zjsMkBGbztjBmVG8gkfElz">
-<ul class="tick" style="font-size:18px" data-page-node-id="8VdXERHHUv5ghpe0rz9S9L">
-<li data-page-node-id="Dd178jYwOXjuZOXVGdDzrZ"><b data-page-node-id="rJyX39AZAIFEITh8hsogsQ">Installér MySQL Workbench</b> fra mysql.com — vælg versionen til dit operativsystem.</li>
-<li data-page-node-id="kzFBgCY6Ucnn8EA3a5zJqD"><b data-page-node-id="jiXskYAjG3jpVg0PFOSpP1">Tilslut en sample database</b> (fx <span class="mono" data-page-node-id="Z2x4j6LotMPyANbItV7ScU">sakila</span> eller <span class="mono" data-page-node-id="TnocggD5c87iyFcvNvaQjt">world</span>), så der er data at øve på.</li>
-<li data-page-node-id="IJHDLPB9JCjHjGX8tjGiNX">Åbn din connection og bekræft, at du kan se skemaerne i navigatoren.</li>
-</ul>
-</div>
-</section>
-
-<section id="opsummering" data-page-node-id="cYGw8BwM7OWCtA5sy9muFT">
-<p class="kicker" data-page-node-id="w3CoPgX7LnN6CBR0IKfilw">Afslutning</p>
-<h2 class="sec" data-page-node-id="HL0DnVv7VhM5zA8240cEj3">Opsummering</h2>
-<div class="sec-rule" data-page-node-id="UpxXHFZ9iSCaKD1it6zsjA"></div>
-<div style="display:flex;flex-direction:column;gap:16px" data-page-node-id="4DONB2ugyAe3SFC7Lqxwri">
-<div class="band" data-page-node-id="AVzRRJCXXFOTDWafWxW5q5"><span class="ic" data-page-node-id="FYXBMqGmEiMKaryT9HDIYT"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="Ffwctj2UkYzlSb10fzTrvG"><ellipse cx="12" cy="6" rx="8" ry="3" data-page-node-id="rTzPpHUXpoTuzS0AGeZ1xn"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" data-page-node-id="YRlTe2kLxZJReE49HxXFjv"/></svg></span><div data-page-node-id="7g34jbZ5nKCEs9zlyAsmno"><h3 data-page-node-id="cPKKSDsffRtTOPYd0fjE7W">Grundlæggende databasebegreber</h3><p data-page-node-id="qG7QTultlWEsu6zcyXDLJN">Forskellen på filbaserede systemer og databasesystemer · eksempler på databaseapplikationer i hverdagen · DBMS og populære systemer som MySQL og Oracle.</p></div></div>
-<div class="band" data-page-node-id="BUluZYMwgi91I4BCTzd63V"><span class="ic" data-page-node-id="33qXJCDito5PEw46zPz4GH"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="8hspLkowW1IxBuHIfjxyIn"><rect x="3" y="4" width="18" height="16" rx="2" data-page-node-id="VqE5df16QyE5UeCnQSUoyO"/><path d="M3 10h18M10 4v16" data-page-node-id="60H0kAVigIq1iXKlsPCgJP"/></svg></span><div data-page-node-id="GxwlENJgzmpGH4H5t9wZqN"><h3 data-page-node-id="k3AYBAPn2BDXcO2wAFQsnQ">Relationsdatabaser</h3><p data-page-node-id="ufojV1j88qIebf8W9IWutt">E.F. Codd og den relationelle datamodel · relationer, attributter, tupler, grad og kardinalitet · primær- og fremmednøgler — hvordan tabeller relateres.</p></div></div>
-<div class="band" data-page-node-id="HarUz1WieLT1DDiotkm11V"><span class="ic" data-page-node-id="CIIghH0R9OHrlz060kpl28"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="IiJW3cCPEozqA0zohNQj8O"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M13 4l-2 16" data-page-node-id="sKDwuxdUt0IUcptsGz9Q7r"/></svg></span><div data-page-node-id="iktww10gHffiB7YFTsdmAA"><h3 data-page-node-id="1Lvnb8llWDOlHkIrPeRE6M">SQL og CRUD</h3><p data-page-node-id="Wkolt1ABcbUAkFc9BdngC3">SQL som forespørgselssprog: Structured Query Language · CRUD: Create, Read, Update, Delete · historien bag navneændringen fra SEQUEL til SQL.</p></div></div>
-</div>
-</section>
-
-<section id="refleksion" data-page-node-id="kaNT7cpVdd0CvLlppTcJJf">
-<p class="kicker" data-page-node-id="KAuCam2hy5IHYozlpjiGgj">Diskussion</p>
-<h2 class="sec" data-page-node-id="0Kvoy65oal7PEBuLs3x7zu">Spørgsmål til refleksion og diskussion</h2>
-<div class="sec-rule" data-page-node-id="t05Zp7jxZW1c7ZiMjfkwYP"></div>
-<div style="display:flex;flex-direction:column;gap:18px;max-width:820px" data-page-node-id="WkjuuQELjj4HhldTsgyKfU">
-<div class="qa" data-page-node-id="uWuE1NIT49znOkz0VYnQxh">Hvad er fordelene ved at bruge et DBMS frem for et filbaseret system?</div>
-<div class="qa" data-page-node-id="HScbu4DuHuxQBguZO5lKGI">Hvordan kan MySQL Workbench hjælpe dig som nybegynder i SQL?</div>
-</div>
-</section>
-
-</main>
 
 <footer data-page-node-id="biNomte2RmMPzYEYRaY9MG"><div class="wrap" data-page-node-id="NhhmxmUG1Nd0wLeMtDSZX2">
 <span data-page-node-id="hRY94KBnKwFo02Q8sbTEEL"><b data-page-node-id="WNO8NkLjcaHesbGwRAogjL">DB1 · DataBase og MySQL</b> — xbi@2025 · 17/11/2025 · Uge 47</span>
