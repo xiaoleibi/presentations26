@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Learning Hub — UX & Databases</title>
+  <meta name="description" content="A light educational index page linking to UX and database lessons.">
+  <style>
+    :root{
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#2563eb;
+      --accent-2:#06b6d4;
+      --glass: rgba(37,99,235,0.06);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background: linear-gradient(180deg, var(--bg), #ffffff);
+      color:#0f172a;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px 16px;
+      box-sizing:border-box;
+    }
+    .container{
+      max-width:900px;
+      width:100%;
+    }
+    header{
+      text-align:left;
+      margin-bottom:24px;
+    }
+    h1{margin:0;font-size:28px;letter-spacing:-0.01em}
+    p.lead{margin:8px 0 0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
+    .card{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 6px 18px rgba(15,23,42,0.06);}
+    .card h2{margin:0 0 12px;font-size:18px}
+    .lesson-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+    .lesson-list a{
+      display:block;padding:12px;border-radius:8px;text-decoration:none;color:var(--accent);background:linear-gradient(90deg,transparent,transparent);
+      border:1px solid rgba(15,23,42,0.04);
+      transition:all 160ms ease-in-out;align-items:center;display:flex;justify-content:space-between;
+    }
+    .lesson-list a:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(2,6,23,0.06);}
+    .meta{color:var(--muted);font-size:13px}
+    aside.small{padding:16px;display:flex;flex-direction:column;gap:12px}
+    .badge{background:var(--glass);color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px;display:inline-block}
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+    @media (max-width:820px){
+      .grid{grid-template-columns:1fr;}
+      aside.small{order:2}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Learning Hub</h1>
+      <p class="lead">A gentle collection of lessons to help you learn UX design and databases. Click a lesson to open it.</p>
+    </header>
+
+    <main class="grid" role="main">
+      <section class="card" aria-labelledby="ux-title">
+        <h2 id="ux-title">User Experience (UX)</h2>
+        <p class="meta">Design thinking, accessibility, and practical patterns.</p>
+        <ul class="lesson-list" style="margin-top:14px;">
+          <li><a href="ux-lesson.html" title="Open UX lesson">UX Lesson — Introduction to Usable Interfaces <span class="meta">→</span></a></li>
+        </ul>
+      </section>
+
+      <aside class="card small" aria-labelledby="db-title">
+        <div>
+          <span class="badge">Database Series</span>
+        </div>
+        <h2 id="db-title" style="font-size:16px;margin:6px 0 0;">Databases — 5 Lessons</h2>
+        <p class="meta">From fundamentals to simple queries and design.</p>
+
+        <nav style="margin-top:10px;">
+          <ul class="lesson-list">
+            <li><a href="db-lesson-01.html">Lesson 1 — Data Modeling Basics <span class="meta">Intro</span></a></li>
+            <li><a href="db-lesson-02.html">Lesson 2 — Relational Concepts <span class="meta">Keys &amp; Joins</span></a></li>
+            <li><a href="db-lesson-03.html">Lesson 3 — SQL Queries <span class="meta">SELECT, WHERE</span></a></li>
+            <li><a href="db-lesson-04.html">Lesson 4 — Indexes &amp; Performance <span class="meta">Optimization</span></a></li>
+            <li><a href="db-lesson-05.html">Lesson 5 — Backups &amp; Safety <span class="meta">Administration</span></a></li>
+          </ul>
+        </nav>
+
+        <footer>
+          <small>Tip: Open lessons in a new tab to keep this index handy.</small>
+        </footer>
+      </aside>
+    </main>
+  </div>
+</body>
+</html>
