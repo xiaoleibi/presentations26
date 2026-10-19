@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="da" data-page-node-id="0OHxFuzQwKsQB6JSYy02rK">
+<head data-page-node-id="ltYYE82PG7f27YaMNHiWDC">
+<meta charset="UTF-8" data-page-node-id="BAChzAMFOEaeOMjY4WGcjz">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="00M98kWmd0XYi1NQ8qaZJ8">
+  <meta name="robots" content="noindex, nofollow">
+
+<title>DataBase og MySQL — DB1 · Uge 47</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" data-page-node-id="B4opKG3ptT3abozY0HXG5R">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" data-page-node-id="Z9NSBIem[...]">
+<style>
+:root{
+  --navy:#0B2447; --blue:#1E88C7; --amber:#F59E0B;
+  --bg:#F4F7FB; --ink:#1F2937; --muted:#6B7280;
+  --card:#FFFFFF; --line:#DCE6F2; --soft:rgba(30,136,199,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',-apple-system,'Segoe UI',sans-serif;font-size:17px;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+section{padding:64px 0 8px;scroll-margin-top:84px}
+h1,h2,h3,.disp{font-family:'Montserrat','Inter',sans-serif;font-weight:800}
+.kicker{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:10px}
+h2.sec{font-size:34px;color:var(--navy);line-height:1.25;margin-bottom:8px}
+.sec-rule{width:56px;height:4px;background:var(--amber);border-radius:2px;margin:14px 0 26px}
+.lead{font-size:19px;color:var(--muted);max-width:760px;margin-bottom:28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 28px;box-shadow:0 4px 18px rgba(11,36,71,.05)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:860px){.grid2,.grid3{grid-template-columns:1fr}}
+.card h3{font-size:20px;color:var(--navy);margin-bottom:10px}
+.card p,.card li{font-size:16px;color:var(--ink)}
+.muted{color:var(--muted)}
+.amber{color:var(--amber);font-weight:700}
+.blue{color:var(--blue);font-weight:700}
+.pill{display:inline-block;background:var(--soft);color:var(--navy);border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:13px;font-weight:600;margin:4px 6px 0 0}
+img.shot{width:100%;border-radius:12px;border:1px solid var(--line);background:#fff}
+figure{margin:0}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+code,.mono{font-family:'JetBrains Mono','Consolas',monospace}
+.sql{background:#0B2447;color:#E6F1FB;border-radius:12px;padding:20px 22px;font-family:'JetBrains Mono','Consolas',monospace;font-size:15px;line-height:1.7;overflow-x:auto}
+.sql .kw{color:#7FD0FF;font-weight:600}.sql .str{color:#F5C777}.sql .cm{color:#8CA6C4}
+ul.tick{list-style:none}
+ul.tick li{padding-left:30px;position:relative;margin-bottom:12px}
+ul.tick li::before{content:"";position:absolute;left:0;top:7px;width:12px;height:12px;border-radius:3px;background:var(--blue)}
+.qa{border-left:4px solid var(--amber);background:#FFFBF2;border-radius:0 12px 12px 0;padding:18px 22px;font-size:18px;font-weight:600;color:var(--navy)}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(244,247,251,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:22px;height:58px;overflow-x:auto}
+nav .brand{font-family:'Montserrat';font-weight:800;color:var(--navy);font-size:15px;white-space:nowrap}
+nav a.nl{color:var(--muted);text-decoration:none;font-size:13.5px;font-weight:600;white-space:nowrap}
+nav a.nl:hover{color:var(--blue)}
+/* hero */
+.hero{background:linear-gradient(135deg,#0B2447 0%,#1E88C7 100%);color:#fff;position:relative;overflow:hidden;padding:96px 0 88px}
+.hero .deco{position:absolute;inset:0;opacity:.16;pointer-events:none}
+.hero h1{font-size:64px;line-height:1.12;letter-spacing:-.5px}
+.hero .sub{margin-top:18px;font-size:20px;color:rgba(255,255,255,.85)}
+.hero .meta{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px}
+.hero .chip{border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:6px 16px;font-size:14px;font-weight:600}
+.hero .chip.hot{background:var(--amber);border-color:var(--amber);color:#0B2447}
+/* chapter divider */
+.chap{background:linear-gradient(135deg,#0B2447 0%,#1E88C7 100%);color:#fff;border-radius:18px;padding:44px 48px;margin:72px 0 40px;position:relative;overflow:hidden}
+.chap .num{font-family:'Montserrat';font-weight:800;font-size:88px;line-height:1;color:rgba(255,255,255,.28)}
+.chap h2{font-size:38px;margin-top:6px}
+.chap .pages{margin-top:12px;font-size:15px;color:rgba(255,255,255,.8);font-weight:600}
+.chap .deco{position:absolute;right:-30px;top:-30px;opacity:.15;pointer-events:none}
+/* agenda */
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:860px){.ag{grid-template-columns:1fr}}
+.ag a{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;text-decoration:none;color:var(--ink)}
+.ag a:hover{border-color:var(--blue)}
+.ag .n{font-family:'Montserrat';font-weight:800;font-size:30px;color:var(--blue);min-width:52px}
+.ag .t{font-weight:700;color:var(--navy)}
+.ag .p{font-size:13px;color:var(--muted)}
+/* big anchor numbers */
+.anchor{font-family:'Montserrat';font-weight:800;font-size:110px;line-height:1;color:var(--blue)}
+/* crud letters */
+.crud{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:860px){.crud{grid-template-columns:repeat(2,1fr)}}
+.crud .c{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 18px;text-align:center}
+.crud .l{font-family:'Montserrat';font-weight:800;font-size:88px;line-height:1;color:var(--navy)}
+.crud .c:first-child .l{color:var(--amber)}
+.crud .w{margin-top:8px;font-weight:700;font-size:17px;color:var(--navy)}
+.crud .d{font-size:13.5px;color:var(--muted);margin-top:4px}
+/* bars */
+.bars{display:flex;flex-direction:column;gap:16px}
+.bar-row{display:grid;grid-template-columns:130px 1fr 64px;align-items:center;gap:14px}
+.bar-row .name{font-weight:700;color:var(--navy);font-size:15px;text-align:right}
+.bar-row .track{background:#E7EEF7;border-radius:8px;height:30px;overflow:hidden}
+.bar-row .fill{height:100%;border-radius:8px;background:linear-gradient(90deg,#1E88C7,#0B2447)}
+.bar-row.hot .fill{background:linear-gradient(90deg,#F59E0B,#F5B944)}
+.bar-row .val{font-family:'MontBrains';font-family:'JetBrains Mono';font-weight:600;color:var(--navy);font-size:15px}
+/* terminal */
+.term{background:#0B2447;border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(11,36,71,.18)}
+.term .bar{display:flex;gap:8px;padding:12px 16px;background:rgba(255,255,255,.06)}
+.term .dot{width:12px;height:12px;border-radius:50%}
+.term pre{padding:20px 22px;color:#DCEBF9;font-family:'JetBrains Mono','Consolas',monospace;font-size:14.5px;line-height:1.8;overflow-x:auto}
+.term .cm{color:#8CA6C4}
+/* feature band */
+.band{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-bottom:16px}
+.band .ic{min-width:46px;height:46px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.band h3{font-size:18px;color:var(--navy);margin-bottom:4px}
+.band p{font-size:15px;color:var(--muted)}
+/* footer */
+footer{margin-top:90px;background:var(--navy);color:rgba(255,255,255,.75);padding:34px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:gap;12px}
+footer b{color:#fff;font-family:'Montserrat'}
+</style>
+</head>
+<body data-page-node-id="vSAy0FbGP5orQB0FGZKnWz">
+<nav data-page-node-id="8lewgCWwxvGWsEqpCD7CsQ"><div class="wrap" data-page-node-id="BGtv528ndLtaGH2oRLA8Vc">
+<span class="brand" data-page-node-id="vFwX6rWdkLmFprDjRw00KB">DB1 · DataBase og MySQL</span>
+<a class="nl" href="#ugeplan" data-page-node-id="fsjmbV1nbgknXyHtftNc7l">Ugeplan</a>
+<a class="nl" href="#k1" data-page-node-id="hsaSokeYLAejbENAdFHe03">01 Databaser &amp; DBMS</a>
+<a class="nl" href="#k2" data-page-node-id="EUOkG1pkPPQfDcbe9LidCO">02 Relationsdatabaser &amp; SQL</a>
+<a class="nl" href="#k3" data-page-node-id="GhGGnn9kynSLsBhwsfnQzE">03 Øvelser</a>
+<a class="nl" href="#k4" data-page-node-id="97Rq6gvP22q10eXUi6k9C0">04 MySQL &amp; Workbench</a>
+<a class="nl" href="#opsummering" data-page-node-id="E2RNPqNANGEzZoMXtLcYfN">Opsummering</a>
+</div></nav>
+
+<header class="hero" id="top" data-page-node-id="jdcLCoLYwWWtpnehZfl4k8">
+<svg class="deco" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" data-page-node-id="rXd5VNA0k8MSJ8FrVFk5uU">
+<g fill="none" stroke="#fff" stroke-width="1" data-page-node-id="8z7vpcVAT6iUdt3M00FErz">
+<path d="M0 60 H1200 M0 140 H1200 M0 220 H1200 M0 300 H1200 M0 380 H1200 M0 460 H1200" data-page-node-id="EwrbqqjnouqNfItorT0KMx"/>
+<path d="M100 0 V500 M260 0 V500 M420 0 V500 M580 0 V500 M740 0 V500 M900 0 V500 M1060 0 V500" data-page-node-id="sVImpLVBL8aL5oRyA6L9Ii"/>
+</g>
+<g fill="#fff" data-page-node-id="uQQxHb1xI3v9JzQKcJ9pB5">
+<ellipse cx="980" cy="250" rx="90" ry="26" data-page-node-id="dyYskoGEkSNBmMkuV81xn5"/><path d="M890 250 v60 a90 26 0 0 0 180 0 v-60" fill="none" stroke="#fff" stroke-width="2" data-page-node-id="3GbP[...]"/>
+<ellipse cx="980" cy="310" rx="90" ry="26" opacity=".5" data-page-node-id="BFpd2l5VL3vuKUNCnCkhBf"/>
+</g>
+</svg>
+<div class="wrap" data-page-node-id="HBfIf7Dqlov3zHP07LOUdT">
+<p class="kicker" style="color:#9FD3F5" data-page-node-id="KictqyvrHzp67idj97hz0c">DB1 · Multimediedesigner · Mandag · Uge 47</p>
+<h1 data-page-node-id="ntnwUdbCja6KUZ2Nj9gs6z">DataBase<br data-page-node-id="p6dG0jLuHRZPYF6oiLXgyv">og MySQL</h1>
+<p class="sub" data-page-node-id="FDD33uSg1xxlw6B1rOCvJ7">Fra filbaserede systemer til relationsdatabaser — og dine første skridt i MySQL Workbench.</p>
+<div class="meta" data-page-node-id="CCcQCrVQherwBQt7421tJp">
+<span class="chip hot" data-page-node-id="wnOuO9YoYhwKPWXCKkg82d">17/11/2025</span>
+<span class="chip" data-page-node-id="LWoaLfpNbwwvttSfoxAw63">xbi@2025</span>
+<span class="chip" data-page-node-id="fUYeSIfgL0acKmK1pIBmcH">Uge 47–49</span>
+<span class="chip" data-page-node-id="IeUFE4zWiiIIpR5Iy4bQGD">31 slides → 1 side</span>
+</div>
+</div>
+</header>
+
+<main class="wrap" data-page-node-id="pKsTLqXlCsYmiSoUPHGEyQ">
+
+<section id="ugeplan" data-page-node-id="dpj8o5HLBOdj2vCJyOHrnP">
+<p class="kicker" data-page-node-id="lHN7rEUIUCFX0xTXWwZPV5">UgePlan</p>
+<h2 class="sec" data-page-node-id="oC6t5D2x9SyxQJB0iQiuuA">Ugeplan — uge 47–49</h2>
+<div class="sec-rule" data-page-node-id="DXImlVPWFJDV9ePQa1GBuQ"></div>
+<p class="lead" data-page-node-id="u7Mji9pY2aEOm76WZgJnue">Dagens pensum er inddelt i fire kapitler. Kapitlerne bygger på hinanden: først <b data-page-node-id="NwQmnyvYniReJ0r9ME6Xld">hvorfor</b> da[...]
+<div class="ag" data-page-node-id="8WhQWn5THSbs1lNOuoKV7I">
+<a href="#k1" data-page-node-id="ZJ9kjaskgGym9BrQZ5AYEF"><span class="n" data-page-node-id="Jn3AxiJDDw1nmNC4nH6Qb1">01</span><span data-page-node-id="enqH1mTIxdhE7XM2CxAEjI"><span class="t" data-page-[...]
+<a href="#k2" data-page-node-id="xGWGOupNw8rRUsavQPnyeh"><span class="n" data-page-node-id="wtIrMUkH7AjsssBaLOW4Yj">02</span><span data-page-node-id="i70i24NOfT3WXs0HDtA70w"><span class="t" data-page-[...]
+<a href="#k3" data-page-node-id="uTGZBqHwNVOfDzpqukZsVM"><span class="n" data-page-node-id="M4WyQuk64BpJjcqcHVzATD">03</span><span data-page-node-id="gzmQhmBaIoRJILbYV5noGY"><span class="t" data-page-[...]
+<a href="#k4" data-page-node-id="7ShrpboM0oTyzDPcLspa60"><span class="n" data-page-node-id="fw55KL2yRmY7FnMlj6s6JI">04</span><span data-page-node-id="g1ER2AgKTnm7rSycPuq1lW"><span class="t" data-page-[...]
+</div>
+</section>
+
+<div class="chap" id="k1" data-page-node-id="PWXPCKg1MAbM1BcK3HE3dW">
+<svg class="deco" width="260" height="260" viewBox="0 0 100 100" aria-hidden="true" data-page-node-id="zjPMR5JFnW7raG3mgrWKYx"><g fill="none" stroke="#fff" stroke-width="1.2" data-page-node-id="tEKzW3[...]
+<div class="num" data-page-node-id="zYRvVJfk6cAaal73nGNyN3">01</div>
+<h2 data-page-node-id="y7lWClAReaQ158wXCsi1rc">Databaser og DBMS</h2>
+<p class="pages" data-page-node-id="F9Ruy4223es7LzK584LxZm">Læringsmål · databaseapplikationer · filbaseret tilgang · DBMS · populære DBMS — s. 4–8</p>
+</div>
+
+<section id="laeringsmaal" data-page-node-id="9psQE52aYpB5BR0c3IuLFs">
+<p class="kicker" data-page-node-id="2CHnDU0UwzXQlXzAlYpCK6">Kapitel 01</p>
+<h2 class="sec" data-page-node-id="ydCn4CzJQHU1I5UEE1dF8A">Læringsmål</h2>
+<div class="sec-rule" data-page-node-id="ktaL9oWT2vJgeQytoDuD7c"></div>
+<div class="grid2" data-page-node-id="Eo3aefD3C0zvVuapVkUgpV">
+<div data-page-node-id="E0y83oFGlYZW9YrtB8Ij8Q">
+<div class="anchor" data-page-node-id="EmuBGo77tpTeKilrXCZntM">05</div>
+<p class="muted" style="margin-top:6px" data-page-node-id="oyBhcpXDBpMqRiAmfWnnnY">mål for dette forløb</p>
+</div>
+<div class="card" data-page-node-id="IGJad0xNVcKbB3PwKhdAt6">
+<ul class="tick" data-page-node-id="DWSw3SaaLm171iD5FbXJak">
+<li data-page-node-id="rCaO2ooJZj46Ykd7xzcitt">Anvendelser af databasesystemer</li>
+<li data-page-node-id="Q9Qpd9NhEmcGIQzi4U3luk">Kendetegn ved filbaserede systemer</li>
+<li data-page-node-id="BUeUgQjFlDiYBEs0ujpOwC">Problemer med den filbaserede tilgang</li>
+<li data-page-node-id="oliS5Px3wFHaGpSgpdaO2Y">Betydningen af begrebet <b data-page-node-id="AoCf8pEaMexqmXLbW2HyKE">relationsdatabase</b></li>
+<li data-page-node-id="8wwF4jGHx2XbLM6bGAbZlu">Betydningen af begrebet <b data-page-node-id="A2u4EIqfsV6w9LMf7QI8Ac">Database Management System (DBMS)</b></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="eksempler" data-page-node-id="bOCWb4hMu5xReJofcGB1Bn">
+<p class="kicker" data-page-node-id="ZMXfGqqtu13utnF5R1iPhj">Kapitel 01</p>
+<h2 class="sec" data-page-node-id="zSvGRI8bbgrpgWbHfCcLS1">Eksempler på databaseapplikationer</h2>
+<div class="sec-rule" data-page-node-id="no0YKWfOUNvohs3L1g6c6j"></div>
+<p class="lead" data-page-node-id="fvRT32gHTqkFYI8W9loJF2">Databaser arbejder usynligt bag grunden af hverdagen. Fem situationer, du allerede kender:</p>
+<div class="grid3" data-page-node-id="DEnSdETHtzXx9EpPHFlZqb">
+<div class="card" style="text-align:center" data-page-node-id="tiiw4zWm9vFtXS7egCuXTo">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1E88C7" stroke-width="1.8" data-page-node-id="dWDqlgVoa46GiB4FQIHJ5z"><circle cx="9" cy="20" r="1.6" data-page-node-id="eQ1H9lBawzz[...]"/>
+<h3 style="margin-top:12px" data-page-node-id="6Sl2igD29PslMxdsBYYWLn">Supermarkedet</h3><p class="muted" data-page-node-id="XNaAHEyz2jfyxss6bWZurm">Indkøb i supermarkedet</p>
+</div>
+... (file truncated for brevity)
+</body>
+</html>
