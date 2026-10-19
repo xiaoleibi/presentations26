@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projektbeskrivelse: Redesign af Musses Pizzas hjemmeside">
+  <title>Projekt UI | Musses Pizza</title>
+  <style>
+    :root {
+      --primary: #9b2c2c;
+      --primary-dark: #741f1f;
+      --ink: #2f3a40;
+      --muted: #667078;
+      --surface: #ffffff;
+      --soft: #f7e9e7;
+      --soft-gray: #f5f6f7;
+      --line: #e2e5e7;
+      --shadow: 0 12px 35px rgba(47, 58, 64, .10);
+      --radius: 16px;
+      --max-width: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #f2f3f4;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid #e9b44c;
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -60px;
+      left: 1rem;
+      z-index: 100;
+      padding: .75rem 1rem;
+      color: #fff;
+      background: var(--ink);
+      border-radius: 0 0 8px 8px;
+    }
+    .skip-link:focus { top: 0; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      color: #fff;
+      background: rgba(47, 58, 64, .97);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, .14);
+    }
+    .nav {
+      width: min(var(--max-width), calc(100% - 2rem));
+      min-height: 66px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .brand {
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-decoration: none;
+    }
+    .nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .nav a {
+      display: inline-block;
+      padding: .55rem .7rem;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .nav li a:hover { background: rgba(255, 255, 255, .12); }
+
+    .hero {
+      color: #fff;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(233, 180, 76, .28), transparent 28%),
+        linear-gradient(135deg, #7c2020, #9b2c2c 55%, #652020);
+    }
+    .hero-inner {
+      width: min(var(--max-width), calc(100% - 2rem));
+      min-height: 540px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      align-items: center;
+      gap: 3rem;
+      padding: 5rem 0;
+    }
+    .eyebrow {
+      margin: 0 0 .5rem;
+      color: #ffd98e;
+      font-size: .86rem;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { line-height: 1.18; }
+    h1 {
+      max-width: 850px;
+      margin: 0;
+      font-size: clamp(2.45rem, 6vw, 5.2rem);
+      letter-spacing: -.04em;
+    }
+    .hero .lead {
+      max-width: 760px;
+      margin: 1.3rem 0 1.8rem;
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+    }
+    .button {
+      display: inline-block;
+      padding: .85rem 1.2rem;
+      color: var(--primary-dark);
+      background: #fff;
+      border-radius: 10px;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
+    }
+    .hero-card {
+      padding: 1.6rem;
+      color: var(--ink);
+      background: rgba(255, 255, 255, .95);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-card h2 { margin-top: 0; color: var(--primary); font-size: 1.25rem; }
+    .hero-card p { margin-bottom: 0; }
+
+    main {
+      width: min(var(--max-width), calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 2rem 0 4rem;
+    }
+    section {
+      margin: 2rem 0;
+      padding: clamp(1.25rem, 3vw, 2.5rem);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      scroll-margin-top: 84px;
+    }
+    section > h2 {
+      margin: 0 0 1.2rem;
+      color: var(--primary);
+      font-size: clamp(1.65rem, 3vw, 2.35rem);
+    }
+    section h3 { margin: 1.5rem 0 .55rem; color: var(--ink); }
+    .question {
+      padding: 1rem 1.15rem;
+      background: var(--soft);
+      border-left: 5px solid var(--primary);
+      border-radius: 0 10px 10px 0;
+    }
+    .question strong { color: var(--primary); }
+
+    .grid-2, .grid-3, .grid-4 {
+      display: grid;
+      gap: 1rem;
+    }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .card {
+      padding: 1rem 1.1rem;
+      background: var(--soft-gray);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .card h3 { margin-top: 0; color: var(--primary); }
+    .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+
+    ul, ol { padding-left: 1.35rem; }
+    li + li { margin-top: .35rem; }
+
+    .table-wrap { overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .96rem;
+    }
+    th, td {
+      padding: .8rem .9rem;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    th { color: #fff; background: var(--primary); }
+    tbody tr:nth-child(even) { background: var(--soft-gray); }
+    td:first-child strong { color: var(--primary); }
+
+    .process {
+      margin: 0;
+      padding: 0;
+      counter-reset: step;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .75rem;
+    }
+    .process li {
+      position: relative;
+      min-height: 72px;
+      margin: 0;
+      padding: .9rem 1rem .9rem 3.4rem;
+      background: var(--soft-gray);
+      border-radius: 12px;
+    }
+    .process li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      top: .85rem;
+      left: .85rem;
+      width: 1.8rem;
+      height: 1.8rem;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--primary);
+      border-radius: 50%;
+      font-weight: 800;
+    }
+
+    .notice {
+      margin-top: 1.2rem;
+      padding: 1rem 1.15rem;
+      background: var(--soft);
+      border-radius: 12px;
+    }
+    .notice strong { color: var(--primary); }
+    .checklist {
+      padding: 0;
+      list-style: none;
+    }
+    .checklist li {
+      position: relative;
+      padding-left: 2rem;
+    }
+    .checklist li::before {
+      content: "";
+      position: absolute;
+      top: .24rem;
+      left: 0;
+      width: 1rem;
+      height: 1rem;
+      border: 2px solid var(--primary);
+      border-radius: 3px;
+      background: #fff;
+    }
+
+    .site-footer {
+      padding: 2rem 1rem;
+      color: #fff;
+      background: var(--ink);
+      text-align: center;
+    }
+    .site-footer p { margin: .2rem 0; }
+
+    @media (max-width: 850px) {
+      .site-header { position: static; }
+      .nav { align-items: flex-start; flex-direction: column; padding: .8rem 0; }
+      .nav ul { font-size: .92rem; }
+      .hero-inner, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .hero-inner { min-height: auto; padding: 3.5rem 0; }
+      .hero-card { max-width: 620px; }
+    }
+    @media (max-width: 620px) {
+      .grid-2, .process { grid-template-columns: 1fr; }
+      .nav ul { display: none; }
+      section { padding: 1.1rem; }
+      th, td { padding: .65rem; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 10pt; }
+      .site-header, .button { display: none; }
+      .hero { color: var(--ink); background: #fff; }
+      .hero-inner { min-height: auto; padding: 1cm 0; grid-template-columns: 1fr; }
+      h1 { color: var(--primary); font-size: 28pt; }
+      main { width: 100%; padding: 0; }
+      section { box-shadow: none; break-inside: avoid; margin: .5cm 0; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#indhold">Gå til indhold</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Hovednavigation">
+      <a class="brand" href="#top">PROJEKT UI</a>
+      <ul>
+        <li><a href="#scenarie">Scenarie</a></li>
+        <li><a href="#opgave">Opgave</a></li>
+        <li><a href="#principper">UI-principper</a></li>
+        <li><a href="#krav">Krav</a></li>
+        <li><a href="#praesentation">Præsentation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero" id="top">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow">Datamatiker | 1. semester</p>
+        <h1>Redesign af Musses Pizzas hjemmeside</h1>
+        <p class="lead">En introduktion til UI-design med fokus på struktur, visuelt hierarki, konsistens og tydelige brugerhandlinger.</p>
+      
+      </div>
+      <aside class="hero-card">
+        <h2>Projektets mål</h2>
+        <p>I skal ikke udvikle en komplet hjemmeside. I skal skabe en visuel desktopprototype og fagligt begrunde, hvordan designet bliver mere tydeligt, brugervenligt og sammenhængende.</p>
+      </aside>
+    </div>
+  </div>
+
+  <main id="indhold">
+    <section id="scenarie">
+      <h2>1. Scenarie og hovedspørgsmål</h2>
+      <p>Ejeren af Musses Pizza oplever, at den nuværende hjemmeside ikke præsenterer restauranten og produkterne tydeligt nok. Jeres gruppe fungerer som et lille designteam, der undersøger siden og foreslår et realistisk redesign.</p>
+      <p class="question"><strong>Hovedspørgsmål:</strong> Hvordan kan hjemmesiden redesignes, så kunderne hurtigt finder relevant information og får lyst til at bestille mad?</p>
+
+      <h3>Kunderne skal hurtigt kunne finde</h3>
+      <div class="grid-3">
+        <article class="card"><h3>Menu</h3><p>Menukort og priser.</p></article>
+        <article class="card"><h3>Bestilling</h3><p>En tydelig mulighed for at bestille.</p></article>
+        <article class="card"><h3>Praktisk information</h3><p>Adresse, åbningstider og kontaktoplysninger.</p></article>
+      </div>
+
+      <h3>Fagligt fokus</h3>
+      <div class="grid-2">
+        <article class="card"><h3>UX</h3><p>Kan kunden finde det, som kunden leder efter?</p></article>
+        <article class="card"><h3>UI</h3><p>Ser siden indbydende, professionel og sammenhængende ud?</p></article>
+      </div>
+    </section>
+
+    <section id="opgave">
+      <h2>2. Opgave og leverancer</h2>
+      <h3>Målgruppe</h3>
+      <p>Lokale kunder i Silkeborg, som hurtigt vil se pizzaer, priser, åbningstider og bestillingsmuligheder. Beskriv målgruppen kort, og vælg 3-4 centrale brugerbehov.</p>
+      <div class="notice"><strong>Eksempel på brugerbehov:</strong> “Jeg vil hurtigt kunne se menuen, finde en pizza, kende prisen og forstå, hvordan jeg bestiller.”</div>
+
+      <h3>Del 1 - Kort analyse</h3>
+      <p>Find mindst tre konkrete problemer på den eksisterende hjemmeside. Undgå vurderinger som “siden er grim”. Brug faglige observationer.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Observation</th><th>Konsekvens for brugeren</th><th>Designløsning</th></tr></thead>
+          <tbody>
+            <tr><td>Bestilling er ikke tydelig.</td><td>Brugeren skal lede efter næste handling.</td><td>Placér “Bestil nu” i header og hero.</td></tr>
+            <tr><td>Svagt visuelt hierarki.</td><td>Det er uklart, hvad man skal se først.</td><td>Brug størrelse, kontrast og afstand til prioritering.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>Del 2 - UI</h3>
+          <ul>
+            <li>3-5 farver med tydelige funktioner</li>
+            <li>Højst to skrifttyper</li>
+            <li>Én ensartet primær knap</li>
+            <li>En fælles billedstil</li>
+            <li>Regler for afstand og layout</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Del 3 - Desktopforside</h3>
+          <ul>
+            <li>Header og navigation</li>
+            <li>Hero-sektion</li>
+            <li>Udvalgte pizzaer eller tilbud</li>
+            <li>Praktiske oplysninger</li>
+            <li>Footer</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Del 4 - Ekstra sektion</h3>
+          <p>Vælg menukort, kontakt, om restauranten, tilbud eller bestillingsoversigt. Brug samme designsystem som på forsiden.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="principper">
+      <h2>3. UI-principper og arbejdsproces</h2>
+      <h3>Principper, der skal kunne ses i prototypen</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Princip</th><th>Sådan bruges det</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Visuelt hierarki</strong></td><td>Det vigtigste ses først gennem størrelse, farve, placering og afstand.</td></tr>
+            <tr><td><strong>Kontrast</strong></td><td>Vigtige elementer skiller sig ud, og teksten er let at læse.</td></tr>
+            <tr><td><strong>Justering</strong></td><td>Tekst, billeder og knapper følger tydelige linjer.</td></tr>
+            <tr><td><strong>Nærhed</strong></td><td>Elementer, der hører sammen, placeres tæt på hinanden.</td></tr>
+            <tr><td><strong>Konsistens</strong></td><td>Elementer med samme funktion har samme udseende.</td></tr>
+            <tr><td><strong>Whitespace</strong></td><td>Luft omkring indhold gør siden nemmere at skimme.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Anbefalet arbejdsproces</h3>
+      <ol class="process">
+        <li>Forstå opgaven, vælg værktøj og fordel roller.</li>
+        <li>Analysér den eksisterende hjemmeside og vælg tre problemer.</li>
+        <li>Beskriv målgruppen og dens vigtigste behov.</li>
+        <li>Lav designsystem og en hurtig skitse.</li>
+        <li>Design forsiden.</li>
+        <li>Design den ekstra side eller sektion.</li>
+        <li>Gennemgå konsistens, læsbarhed og fejl.</li>
+        <li>Forbered præsentationen.</li>
+      </ol>
+
+      <h3>Mulig arbejdsfordeling</h3>
+      <div class="grid-4">
+        <article class="card"><h3>Person 1</h3><p>Analyse og brugerbehov.</p></article>
+        <article class="card"><h3>Person 2</h3><p>Farver, typografi og visuel stil.</p></article>
+        <article class="card"><h3>Person 3</h3><p>Prototype og UI-elementer.</p></article>
+        <article class="card"><h3>Person 4</h3><p>Indhold, kvalitetssikring og præsentation.</p></article>
+      </div>
+      <div class="notice"><strong>Vigtigt samarbejdsprincip:</strong> Gruppen afleverer ét samlet produkt. Aftal designsystemet først, så siderne ikke ser ud som fire forskellige løsninger.</div>
+    </section>
+
+    <section id="krav">
+      <h2>4. Krav og prioritering</h2>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Krav til resultatet</h3>
+          <ul>
+            <li>En klikbar eller visuel prototype til desktop</li>
+            <li>Kan vises i Google Chrome</li>
+            <li>Forside plus én ekstra sektion</li>
+            <li>Konsistent brug af designvalg</li>
+            <li>Klar til demonstration og faglig begrundelse</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Ikke et krav</h3>
+          <p>Login, database, betalingssystem, indkøbskurv, brugeradministration, ægte onlinebestilling eller en komplet mobilversion.</p>
+        </article>
+      </div>
+      <div class="notice"><strong>Hvis tiden bliver knap:</strong> Prioritér analyse, tydelig struktur, forsiden og konsistens. Brug ikke lang tid på perfekte billeder, små farveforskelle eller unødvendig programmering.</div>
+    </section>
+
+    <section id="praesentation">
+      <h2>5. Præsentation og aflevering</h2>
+      <h3>Præsentation - 10 minutter</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Del</th><th>Indhold</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1. Formål og målgruppe</strong></td><td>Hvem designer I til, og hvilke behov løser I?</td></tr>
+            <tr><td><strong>2. Analyse</strong></td><td>Tre problemer, deres konsekvenser og jeres løsninger.</td></tr>
+            <tr><td><strong>3. Designsystem</strong></td><td>Farver, typografi, billedstil, knapper og layoutregler.</td></tr>
+            <tr><td><strong>4. Prototype</strong></td><td>Vis forsiden og den ekstra side eller sektion.</td></tr>
+            <tr><td><strong>5. Refleksion</strong></td><td>Hvad lykkedes, hvad var svært, og hvad ville I forbedre?</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <h3>Praktiske oplysninger</h3>
+          <ul>
+            <li>Projektarbejde: 30. oktober, 3 timer</li>
+            <li>Tilfældig vejledning med XBI fra kl. 10.00</li>
+            <li>Gruppepræsentation: 12. november i uge 46</li>
+            <li>Mulige værktøjer: Canva, Wix eller HTML/CSS</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Afleveringstjek</h3>
+          <ul class="checklist">
+            <li>Tre faglige observationer med konsekvens og løsning</li>
+            <li>Kort målgruppe og brugerbehov</li>
+            <li>design UI</li>
+            <li>Desktopforside</li>
+            <li>Én ekstra side eller sektion</li>
+            <li>10-minutters præsentation med UI-begreber</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>PROJEKT UI | Musses Pizza</strong></p>
+    <p>Redesignprojekt for datamatikerstuderende på 1. semester</p>
+  </footer>
+</body>
+</html>
