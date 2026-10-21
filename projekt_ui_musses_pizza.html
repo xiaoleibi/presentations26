@@ -29,8 +29,8 @@
       color: var(--ink);
       background: #f3f5f5;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 6px;
-      line-height: .65;
+      font-size: 16px;
+      line-height: 1.65;
     }
     a { color: inherit; }
     a:focus-visible, button:focus-visible {
@@ -41,9 +41,9 @@
     .skip-link {
       position: absolute;
       top: -60px;
-      left: rem;
-      z-index: 00;
-      padding: .75rem rem;
+      left: 1rem;
+      z-index: 100;
+      padding: .75rem 1rem;
       color: #fff;
       background: var(--ink);
       border-radius: 0 0 8px 8px;
@@ -55,17 +55,17 @@
       top: 0;
       z-index: 20;
       color: #fff;
-      background: rgba(8, 6, 5, .96);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
+      background: rgba(18, 61, 51, .96);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, .14);
     }
     .nav {
-      width: min(var(--max-width), calc(00% - 2rem));
+      width: min(var(--max-width), calc(100% - 2rem));
       min-height: 66px;
       margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: rem;
+      gap: 1rem;
     }
     .brand {
       font-weight: 800;
@@ -86,20 +86,20 @@
       border-radius: 8px;
       text-decoration: none;
     }
-    .nav li a:hover { background: rgba(255, 255, 255, .2); }
+    .nav li a:hover { background: rgba(255, 255, 255, .12); }
 
     .hero {
       color: #fff;
       background:
-        radial-gradient(circle at 5% 20%, rgba(26, 55, 60, .35), transparent 25%),
-        linear-gradient(35deg, #23d33, #f5d4d 55%, #83c36);
+        radial-gradient(circle at 15% 20%, rgba(216, 155, 60, .35), transparent 25%),
+        linear-gradient(135deg, #123d33, #1f5d4d 55%, #183c36);
     }
     .hero-inner {
-      width: min(var(--max-width), calc(00% - 2rem));
+      width: min(var(--max-width), calc(100% - 2rem));
       min-height: 520px;
       margin: auto;
       display: grid;
-      grid-template-columns: .3fr .7fr;
+      grid-template-columns: 1.3fr .7fr;
       align-items: center;
       gap: 3rem;
       padding: 5rem 0;
@@ -109,11 +109,11 @@
       color: #f9d89f;
       font-size: .86rem;
       font-weight: 800;
-      letter-spacing: .5em;
+      letter-spacing: .15em;
       text-transform: uppercase;
     }
-    h, h2, h3 { line-height: .8; }
-    h {
+    h1, h2, h3 { line-height: 1.18; }
+    h1 {
       max-width: 850px;
       margin: 0;
       font-size: clamp(2.45rem, 6vw, 5.2rem);
@@ -121,15 +121,15 @@
     }
     .hero .lead {
       max-width: 760px;
-      margin: .3rem 0 .8rem;
-      font-size: clamp(.05rem, 2vw, .28rem);
+      margin: 1.3rem 0 1.8rem;
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
     }
     .button {
       display: inline-block;
-      padding: .85rem .2rem;
+      padding: .85rem 1.2rem;
       color: var(--primary-dark);
       background: #fff;
-      border-radius: 0px;
+      border-radius: 10px;
       font-weight: 800;
       text-decoration: none;
       box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
@@ -355,12 +355,13 @@
 </div>
 <aside class="hero-card">
 <h2>Projektets fokus</h2>
-<p>Med kunder som målgruppe, begynderniveau, ingen database og fokus på praktisk anvendelse er et digitalt selvbetjeningssystem et godt valg. Det løser et konkret problem og viser Java, JavaFX, OOP, brugerinteraktion og logik uden at gøre projektet unødigt kompliceret.</p>
+<p>Med kunder som målgruppe, begynderniveau, ingen database og fokus på praktisk anvendelse UI design valg. 
+  Det løser et konkret problem og viser Java, UI og logik uden at gøre projektet unødigt kompliceret.</p>
 </aside>
 </div>
 </div>
 <main id="indhold">
-<section id="scenarie"><div class="section-inner"><p class="section-number"></p><h2>1. Opgaven</h2>
+<section id="scenarie"><div class="section-inner"><p class="section-number</p><h2>1. Opgaven</h2>
 <p>En restaurant ønsker en enkel skærm, hvor en kunde kan se menu og vælge mellem retter. Målet er at lave en lille prototype med et tydeligt design og få funktioner.</p>
 <div class="callout"><strong>Hovedspørgsmål:</strong> Hvordan kan en enkel brugerflade gøre det let at vælge en ret og se prisen?</div>
 <div class="grid-3">
@@ -376,7 +377,6 @@
 <article class="card"><h3>Brugerflade UI</h3><ul>
 <li>En overskrift med restaurantens navn.</li>
 <li>retter med navn og pris.</li>
-<li>En knap til at nulstille valget.</li>
 </ul></article>
 <article class="card"><h3>Funktioner</h3><ul>
 <li>Når kunden trykker på en ret, vises navnet og prisen på den valgte ret.</li>
@@ -384,8 +384,8 @@
 </div>
 <div class="callout"><strong>Afgrænsning:</strong> Løsningen skal ikke have søgning, database, login, betaling gateway</div>
 </div></section>
-<section id="krav"><div class="section-inner"><p class="section-number"></p><h2>3. Enkel løsning i JavaFX</h2>
-<p>JavaFX kan bruges til at opbygge brugerfladen og håndtere brugerinteraktioner. Brug kun de funktioner, der er nødvendige for at opnå det ønskede resultat.</p>
+<section id="krav"><div class="section-inner"><p class="section-number">3</p><h2>3. Enkel løsning i JavaFX</h2>
+<p>JavaFX kan bruges til at opbygge brugerfladen. Brug kun de funktioner, der er nødvendige for at opnå det ønskede resultat.</p>
 <div class="grid-2">
 <article class="card"><h3>Komponenter</h3><ul>
 <li><strong>Label</strong> til overskrift, retter, priser og kundens valg.</li>
@@ -394,8 +394,7 @@
 </ul></article>
 <article class="card"><h3>Kode</h3><ul>
  <li>Retternes navne og priser må skrives direkte i koden.</li>
-<li>Knapperne ændrer teksten i en Label.</li>
-<li>Ekstra CSS er frivilligt.</li>
+ <li>Ekstra CSS er frivilligt.</li>
 </ul></article>
 </div>
 <p><strong>Eksempel på resultat:</strong> “Du har valgt Margherita – 75 kr.”</p>
@@ -404,25 +403,25 @@
 <ol class="steps">
 <li><strong>Plan and sketch</strong><br/>Tegn en enkel skitse af skærmen med tre retter, knapper og et område til det valgte produkt.</li>
 <li><strong>Build the JavaFX interface</strong><br/>Opret ét vindue med Labels, Buttons og et enkelt layout.</li>
-<li><strong>Implement the buttons</strong><br/>Lad hver knap vise navnet og prisen på den valgte ret. Tilføj derefter nulstilling.</li>
+<li><strong>Implement</strong><br/>Lad hver knap vise navnet og prisen på den valgte ret. Tilføj derefter nulstilling.</li>
 <li><strong>Test and correct errors</strong><br/>Kontrollér, at alle tre valg og nulstil-knappen virker.</li>
 <li><strong>Improve the UI and prepare the demonstration</strong><br/>Gør tekst, afstande og knapper tydelige. Forbered en kort forklaring af løsningen.</li>
 </ol>
 <div class="callout"><strong>Prioritet:</strong> En lille løsning, der virker, er vigtigere end mange funktioner eller avanceret styling.</div>
 <p><strong>UI-reference:</strong> <a class="course-link" href="https://xiaoleibi.github.io/presentations26/DMU2026-UIUX-Grafisk-Design-2x45min.html" rel="noopener noreferrer" target="_blank">Åbn kurset om UI/UX og grafisk design</a></p></div></section>
-<section id="aflevering"><div class="section-inner"><p class="section-number">5</p><h2>5. Aflevering og præsentation</h2>
+<section id="aflevering"><div class="section-inner"><p class="section-number"></p><h2>5. Aflevering og præsentation</h2>
 <div class="grid-2">
 <article class="card"><h3>Det afleveres</h3><ul>
-<li>Et JavaFX-projekt, som kan vises.</li>
-<li>En kort demonstration af de UI design valg </li>
-<li>En kort forklaring af brugerfladen i JavaFx.</li>
+<li>Et JavaFX-projekt, som kan startes.</li>
+<li>En kort demonstration af de UI design valg.</li>
+<li>En kort forklaring af brugerfladen og knappernes funktion.</li>
 </ul></article>
-
+ 
 </div>
 </div></section>
 </main>
 <footer class="site-footer">
-<p><strong>PROJEKT JAVAFX | Pizza Restaurant</strong></p>
+<p><strong>PROJEKT JAVAFX | Dansk Pizza Restaurant</strong></p>
 <p>Et enkelt projekt med fokus på grundlæggende JavaFX og et tydeligt UI design</p>
 </footer>
 </body>
