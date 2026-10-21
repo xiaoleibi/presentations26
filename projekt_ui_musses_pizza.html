@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="da">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Projektbeskrivelse: JavaFX-projekter til en dansk restaurant">
-  <title>Projekt JavaFX | Dansk Restaurant</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Et enkelt JavaFX-projekt for begyndere: vælg én af tre retter og se navnet og prisen." name="description"/>
+<title>Enkelt UI-projekt | Restaurantmenu</title>
+<style>
     :root {
       --primary: #1f5d4d;
       --primary-dark: #123d33;
@@ -303,201 +304,132 @@
       main { width: 100%; padding: 0; }
       section { box-shadow: none; break-inside: avoid; margin: .5cm 0; }
     }
-  </style>
+  
+    .reference-figure {
+      margin: 1.5rem 0;
+      overflow: hidden;
+      background: var(--soft-warm);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+    .reference-figure img {
+      display: block;
+      width: 100%;
+      max-height: 560px;
+      object-fit: cover;
+    }
+    .reference-figure figcaption {
+      padding: 1rem 1.15rem;
+      color: var(--muted);
+    }
+    .course-link {
+      display: inline-block;
+      margin-top: .7rem;
+      color: var(--primary);
+      font-weight: 800;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+</style>
 </head>
 <body>
-  <a class="skip-link" href="#indhold">Gå til indhold</a>
-
-  <header class="site-header">
-    <nav class="nav" aria-label="Hovednavigation">
-      <a class="brand" href="#top">PROJEKT JAVAFX</a>
-      <ul>
-        <li><a href="#scenarie">Scenarie</a></li>
-        <li><a href="#ideer">Projektidéer</a></li>
-        <li><a href="#krav">Krav</a></li>
-        <li><a href="#anbefaling">Anbefaling</a></li>
-        <li><a href="#aflevering">Aflevering</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="hero" id="top">
-    <div class="hero-inner">
-      <div>
-        <p class="eyebrow">Datamatiker | 1. semester</p>
-        <h1>JavaFX-projekter til en dansk restaurant</h1>
-        <p class="lead">Et praktisk og realistisk programmeringsprojekt, hvor studerende designer en digital løsning til bestilling, menu eller reservation i en dansk restaurant.</p>
-      </div>
-      <aside class="hero-card">
-        <h2>Projektets fokus</h2>
-        <p>Med kunder som målgruppe, begynderniveau, ingen database og fokus på praktisk anvendelse er et digitalt selvbetjeningssystem et godt valg. Det løser et konkret problem og viser Java, JavaFX, OOP, brugerinteraktion og logik uden at gøre projektet unødigt kompliceret.</p>
-      </aside>
-    </div>
-  </div>
-
-  <main id="indhold">
-    <section id="scenarie">
-      <h2>1. Scenarie og hovedspørgsmål</h2>
-      <p>En dansk restaurant vil gerne give kunderne en mere effektiv og moderne måde at bestille mad på. Restauranten ønsker ikke et komplekst system med login, database eller onlinebetaling, men en enkel løsning, der kan demonstrere brugervenlighed og programmering i JavaFX.</p>
-      <p class="question"><strong>Hovedspørgsmål:</strong> Hvordan kan vi skabe en enkel JavaFX-applikation, der hjælper kunden med at finde, vælge og bestille mad på en tydelig og brugervenlig måde?</p>
-
-      <h3>Hvad skal kunden kunne gøre?</h3>
-      <div class="grid-3">
-        <article class="card"><h3>Se menu</h3><p>Se retter, priser og beskrivelser.</p></article>
-        <article class="card"><h3>Vælge retter</h3><p>Tilføje eller fjerne varer fra en ordre.</p></article>
-        <article class="card"><h3>Få bekræftelse</h3><p>Se samlet pris og bestillingsstatus.</p></article>
-      </div>
-
-      <h3>Fagligt fokus</h3>
-      <div class="grid-2">
-        <article class="card"><h3>JavaFX</h3><p>Grafiske brugergrænseflader, knapper, lister, felter og layout.</p></article>
-        <article class="card"><h3>Objektorienteret programmering</h3><p>Klasser, objekter, metoder, datamodel og ansvarlig opdeling.</p></article>
-      </div>
-    </section>
-
-    <section id="ideer">
-      <h2>2. Tre projektidéer, der passer til kravene</h2>
-      <p class="question"><strong>Vigtigt:</strong> Alle tre projekter er relevante for et begynderniveau, kan laves uden database og passer til en dansk restaurant.</p>
-
-      <div class="grid-3">
-        <article class="project-card">
-          <span class="badge">Projekt A</span>
-          <h3>Selvbetjeningskiosk</h3>
-          <div class="level">Min anbefaling</div>
-          <p>Kunden vælger retter, tilføjer dem til en kurv og ser den samlede pris, inden bestillingen bekræftes.</p>
-          <h4>Funktioner</h4>
-          <ul>
-            <li>Menu med billeder, beskrivelser og priser i DKK.</li>
-            <li>Kategorier som hovedretter, drikkevarer og desserter.</li>
-            <li>Tilføj og fjern varer.</li>
-            <li>Automatisk beregning af total.</li>
-            <li>Ordrebekræftelse på skærmen.</li>
-          </ul>
-          <p><strong>Sværhedsgrad:</strong> Begynder til let øvet</p>
-        </article>
-
-        <article class="project-card">
-          <span class="badge">Projekt B</span>
-          <h3>Interaktiv restaurantmenu</h3>
-          <div class="level">Begynder</div>
-          <p>Kunden udforsker restaurantens menu, søger efter retter og læser ingredienser og priser.</p>
-          <h4>Funktioner</h4>
-          <ul>
-            <li>Visning af retter opdelt i kategorier.</li>
-            <li>Søgefelt.</li>
-            <li>Filtrering efter vegetariske retter.</li>
-            <li>Detaljevisning med ingredienser og allergener.</li>
-            <li>Mulighed for at markere favoritter.</li>
-          </ul>
-          <p><strong>Sværhedsgrad:</strong> Begynder</p>
-        </article>
-
-        <article class="project-card">
-          <span class="badge">Projekt C</span>
-          <h3>Bordbestilling</h3>
-          <div class="level">Begynder til let øvet</div>
-          <p>Kunden vælger dato, tidspunkt og antal gæster og får en bekræftelse på sin reservation.</p>
-          <h4>Funktioner</h4>
-          <ul>
-            <li>Formular til kontaktoplysninger.</li>
-            <li>Valg af dato og tidspunkt.</li>
-            <li>Valg af antal gæster.</li>
-            <li>Kontrol af obligatoriske felter.</li>
-            <li>Reservationsoversigt i programmet.</li>
-          </ul>
-          <p><strong>Sværhedsgrad:</strong> Begynder til let øvet</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="krav">
-      <h2>3. Krav og designmæssige overvejelser</h2>
-      <div class="grid-2">
-        <article class="card">
-          <h3>Projektkrav</h3>
-          <ul>
-            <li>Et JavaFX-projekt med tydelig brugergrænseflade</li>
-            <li>Ingen database eller onlinebetaling</li>
-            <li>Fokus på praktisk anvendelse og brugeroplevelse</li>
-            <li>Relativt lille, overskuelig og realistisk løsning</li>
-            <li>Brug af klasser, objekter og logik i Java</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Vigtige krav for alle projekter</h3>
-          <ul>
-            <li>Kunder som målgruppe</li>
-            <li>Begynderlevel og tilgængelig kompleksitet</li>
-            <li>Praktisk funktionalitet frem for “kun visuel” design</li>
-            <li>Klar struktur og forståelig kodedeling</li>
-            <li>Mulighed for at demonstrere brugerinteraktion</li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="notice"><strong>Hvorfor Projekt A er bedst?</strong> Det løser et konkret problem i en restaurant: kunden skal hurtigt finde, vælge og bestille mad. Det giver samtidig mulighed for at vise JavaFX elementer som lister, knapper, beregning, og brug af dataobjekter på en enkel og forståelig måde.</div>
-    </section>
-
-    <section id="anbefaling">
-      <h2>4. Anbefaling</h2>
-      <p>Jeg vil anbefale projektet <strong>Selvbetjeningskiosk</strong> som det mest velegnede valg.</p>
-      <p>Det er realistisk, relevant og godt til at vise, hvordan software kan løse et virkeligt problem i restaurationsbranchen. Projektet er også meget godt til undervisningsformål, fordi det kombinerer:</p>
-      <ul>
-        <li>JavaFX-layout og GUI-design</li>
-        <li>Objektorienteret programmering</li>
-        <li>Brugerinteraktion og datamodel</li>
-        <li>Logik for priser, kurv og bestilling</li>
-        <li>Praktisk anvendelse uden unødig kompleksitet</li>
-      </ul>
-    </section>
-
-    <section id="aflevering">
-      <h2>5. Aflevering og præsentation</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Del</th>
-              <th>Indhold</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>1. Problemstilling</strong></td><td>Hvad vil kunden kunne gøre i systemet?</td></tr>
-            <tr><td><strong>2. Design</strong></td><td>Hvordan er brugerfladen bygget op?</td></tr>
-            <tr><td><strong>3. Funktionalitet</strong></td><td>Hvilke handlinger kan brugeren udføre?</td></tr>
-            <tr><td><strong>4. Kode og OOP</strong></td><td>Hvordan er klasser og objekter organiseret?</td></tr>
-            <tr><td><strong>5. Refleksion</strong></td><td>Hvad lykkedes, og hvad kunne være forbedret?</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="grid-2">
-        <article class="card">
-          <h3>Praktiske oplysninger</h3>
-          <ul>
-            <li>Projektet kan laves i Java med JavaFX</li>
-            <li>Ingen database kræves</li>
-            <li>Fokus på brugeroplevelse og struktur</li>
-            <li>Velegnet til 1. semester eller begynderniveau</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Afleveringstjek</h3>
-          <ul class="checklist">
-            <li>Projektet har tydelig problemstilling</li>
-            <li>Brugerfladen er overskuelig</li>
-            <li>Systemet indeholder relevant funktionalitet</li>
-            <li>Koden viser OOP-principper</li>
-            <li>Projektet er realistisk og brugbart</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p><strong>PROJEKT JAVAFX | Dansk Restaurant</strong></p>
-    <p>Praktisk programmeringsprojekt med fokus på Java, JavaFX og brugerinteraktion</p>
-  </footer>
+<a class="skip-link" href="#indhold">Gå til indhold</a>
+<header class="site-header">
+<nav aria-label="Hovednavigation" class="nav">
+<a class="brand" href="#top">PROJEKT UI</a>
+<ul>
+<li><a href="#scenarie">Opgaven</a></li>
+<li><a href="#ideer">Indhold</a></li>
+<li><a href="#krav">UI opgave</a></li>
+<li><a href="#anbefaling">Arbejdsproces</a></li>
+<li><a href="#aflevering">Aflevering</a></li>
+</ul>
+</nav>
+</header>
+<div class="hero" id="top">
+<div class="hero-inner">
+<div>
+<p class="eyebrow">Datamatiker | 1. semester</p>
+<h1>Enkel restaurantmenu</h1>
+<p class="lead">Design og byg en lille prototype, hvor kunden kan se prisen for hver ret.</p>
+</div>
+<aside class="hero-card">
+<h2>Projektets fokus</h2>
+<p>Med kunder som målgruppe, begynderniveau, ingen database og fokus på praktisk anvendelse er et digitalt selvbetjeningssystem et godt valg. Det løser et konkret problem og viser Java, JavaFX, OOP, brugerinteraktion og logik uden at gøre projektet unødigt kompliceret.</p>
+</aside>
+</div>
+</div>
+<main id="indhold">
+<section id="scenarie"><div class="section-inner"><p class="section-number">1</p><h2>1. Opgaven</h2>
+<p>En restaurant ønsker en enkel skærm, hvor en kunde kan se menu og vælge mellem retter. Målet er at lave en lille prototype med et tydeligt design og få funktioner.</p>
+<div class="callout"><strong>Hovedspørgsmål:</strong> Hvordan kan en enkel brugerflade gøre det let at vælge en ret og se prisen?</div>
+<div class="grid-3">
+<article class="card"><h3>Se menuen</h3><p>Kunden kan se retter med navn og pris.</p></article>
+<article class="card"><h3>Vælge en ret</h3><p>Kunden kan vælge en ret ved at trykke på en knap.</p></article>
+</div>
+<figure class="reference-figure">
+  <img src="ChatGPT Image 21 Oct 2026, 09_46_32.jpg" alt="Self-service solution">
+  <figcaption><strong>Visuel reference:</strong> En selvbetjeningsløsning, hvor kunden vælger mad direkte på en touchskærm. Brug billedet som inspiration til informationshierarki, kategorier, produktkort, tydelige valg og en enkel bestillingsproces.</figcaption>
+</figure></div></section>
+<section id="ideer"><div class="section-inner"><p class="section-number">2</p><h2>2. Det skal løsningen indeholde</h2>
+<div class="grid-2">
+<article class="card"><h3>Brugerflade UI</h3><ul>
+<li>En overskrift med restaurantens navn.</li>
+<li>retter med navn og pris.</li>
+<li>En knap til at nulstille valget.</li>
+</ul></article>
+<article class="card"><h3>Funktioner</h3><ul>
+<li>Når kunden trykker på en ret, vises navnet og prisen på den valgte ret.</li>
+</ul><p>Der skal kun kunne vælges <strong>én ret ad gangen</strong>.</p></article>
+</div>
+<div class="callout"><strong>Afgrænsning:</strong> Løsningen skal ikke have søgning, database, login, betaling, billeder eller flere sider.</div>
+</div></section>
+<section id="krav"><div class="section-inner"><p class="section-number">3</p><h2>3. Enkel løsning i JavaFX</h2>
+<p>JavaFX kan bruges til at opbygge brugerfladen og håndtere brugerinteraktioner. Brug kun de funktioner, der er nødvendige for at opnå det ønskede resultat.</p>
+<div class="grid-2">
+<article class="card"><h3>Komponenter</h3><ul>
+<li><strong>Label</strong> til overskrift, retter, priser og kundens valg.</li>
+<li><strong>Button</strong> til valg af ret og nulstilling.</li>
+<li><strong>VBox</strong> eller <strong>HBox</strong> til et enkelt layout.</li>
+</ul></article>
+<article class="card"><h3>Kode</h3><ul>
+ <li>Retternes navne og priser må skrives direkte i koden.</li>
+<li>Knapperne ændrer teksten i en Label.</li>
+<li>Ekstra CSS er frivilligt.</li>
+</ul></article>
+</div>
+<p><strong>Eksempel på resultat:</strong> “Du har valgt Margherita – 75 kr.”</p>
+</div></section>
+<section id="anbefaling"><div class="section-inner"><p class="section-number">4</p><h2>4. Forslag til arbejdsproces</h2>
+<ol class="steps">
+<li><strong>Plan and sketch</strong><br/>Tegn en enkel skitse af skærmen med tre retter, knapper og et område til det valgte produkt.</li>
+<li><strong>Build the JavaFX interface</strong><br/>Opret ét vindue med Labels, Buttons og et enkelt layout.</li>
+<li><strong>Implement the buttons</strong><br/>Lad hver knap vise navnet og prisen på den valgte ret. Tilføj derefter nulstilling.</li>
+<li><strong>Test and correct errors</strong><br/>Kontrollér, at alle tre valg og nulstil-knappen virker.</li>
+<li><strong>Improve the UI and prepare the demonstration</strong><br/>Gør tekst, afstande og knapper tydelige. Forbered en kort forklaring af løsningen.</li>
+</ol>
+<div class="callout"><strong>Prioritet:</strong> En lille løsning, der virker, er vigtigere end mange funktioner eller avanceret styling.</div>
+<p><strong>UI-reference:</strong> <a class="course-link" href="https://xiaoleibi.github.io/presentations26/DMU2026-UIUX-Grafisk-Design-2x45min.html" rel="noopener noreferrer" target="_blank">Åbn kurset om UI/UX og grafisk design</a></p></div></section>
+<section id="aflevering"><div class="section-inner"><p class="section-number">5</p><h2>5. Aflevering og præsentation</h2>
+<div class="grid-2">
+<article class="card"><h3>Det afleveres</h3><ul>
+<li>Et JavaFX-projekt, som kan startes.</li>
+<li>En kort demonstration af de tre valg og nulstilling.</li>
+<li>En kort forklaring af brugerfladen og knappernes funktion.</li>
+</ul></article>
+<article class="card"><h3>Tjekliste</h3><ul>
+<li>Tre retter og priser vises.</li>
+<li>Hver ret har en fungerende knap.</li>
+<li>Det valgte produkt og prisen vises tydeligt.</li>
+<li>Nulstil-knappen virker.</li>
+<li>Brugerfladen er let at læse.</li>
+</ul></article>
+</div>
+</div></section>
+</main>
+<footer class="site-footer">
+<p><strong>PROJEKT JAVAFX | Dansk Restaurant</strong></p>
+<p>Et enkelt projekt med fokus på grundlæggende JavaFX og et tydeligt UI design</p>
+</footer>
 </body>
 </html>
