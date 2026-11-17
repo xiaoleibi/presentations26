@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Repetitionsspørgsmål om databaser og relationer fra DB1 og DB2.">
+  <title>Repetition: Databaser og relationer</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      color: #172033;
+      background: #f4f7fb;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 32px 16px; }
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: clamp(22px, 5vw, 48px);
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(23, 32, 51, .08);
+    }
+    h1 { margin: 0; color: #173b70; font-size: clamp(1.8rem, 5vw, 2.5rem); }
+    .subtitle { margin: 8px 0 24px; color: #53647b; }
+    .student-info { display: flex; flex-wrap: wrap; gap: 24px; margin: 24px 0; }
+    .student-info span { min-width: 190px; flex: 1; border-bottom: 1px solid #9aa8b8; padding-bottom: 8px; }
+    .instructions { padding: 14px 16px; background: #eef5ff; border-left: 4px solid #2563eb; border-radius: 6px; }
+    h2 { margin: 32px 0 14px; color: #173b70; font-size: 1.25rem; }
+    ol { padding-left: 1.5rem; }
+    li { margin: 0 0 18px; padding-left: 5px; line-height: 1.6; }
+    li::marker { font-weight: 700; color: #2563eb; }
+    .subquestions { margin-top: 10px; }
+    .subquestions li { margin-bottom: 8px; }
+    a { color: #1d4ed8; }
+    @media print {
+      :root { background: #fff; }
+      body { padding: 0; }
+      main { max-width: none; padding: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Repetition: Databaser og relationer</h1>
+      <p class="subtitle">Uge 47 · Database og MySQL · 10 spørgsmål</p>
+    </header>
+
+    <div class="student-info" aria-label="Elevoplysninger">
+      <span>Navn:</span>
+      <span>Dato:</span>
+    </div>
+
+    <p class="instructions">Besvar spørgsmålene kort og præcist. Der er i alt 10 spørgsmål.</p>
+
+    <section aria-labelledby="db1-heading">
+      <h2 id="db1-heading">Del 1 — Introduktion til databaser (DB1)</h2>
+      <ol>
+        <li><strong>Data og information</strong><br>Forklar forskellen på data og information. Hvornår bliver data til information?</li>
+        <li><strong>Metadata</strong><br>Hvad betyder metadata, og hvad fortæller metadata os om data?</li>
+        <li><strong>Filbaseret system vs. DBMS</strong><br>Sammenlign et filbaseret system med et DBMS. Nævn mindst tre forskelle.</li>
+        <li><strong>Ulemper ved filbaseret databehandling</strong><br>Nævn tre ulemper ved filbaseret databehandling.</li>
+        <li><strong>Komponenter i et databasesystem</strong><br>Nævn mindst tre funktioner eller komponenter, der indgår i et databasesystem (DBMS). Medtag MySQL Workbench.</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="db2-heading">
+      <h2 id="db2-heading">Del 2 — Relationsdatabaser (DB2)</h2>
+      <ol start="6">
+        <li><strong>Relationsdatamodellens historie</strong><br>Hvem introducerede relationsdatamodellen, hvornår og hvor? Hvad førte Codd desuden til?</li>
+        <li><strong>Relationsdatabase og terminologi</strong><br>Hvad er en relationsdatabase? Forklar også, hvordan en entitet, en attribut og en relation hænger sammen.</li>
+        <li><strong>Primærnøgler og fremmednøgler</strong><br>Forklar forskellen på en primærnøgle (PK) og en fremmednøgle (FK). Se derefter på disse to tabeller og angiv:</li>
+        <li><strong>SQL og MySQL Workbench</strong>
+          <ol class="subquestions" type="a">
+            <li>Hvad gør kommandoerne <code>SELECT VERSION();</code>, <code>SELECT NOW();</code> og <code>SHOW DATABASES;</code>?</li>
+            <li>Skriv en SQL-forespørgsel, der finder alle lande i tabellen <code>Country</code>.</li>
+            <li>Hvilket software fra Oracle blev brugt til at arbejde med MySQL?</li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      <p><small>Kilde: Uge47DB1Intro.pptx (DB1) og Uge47DB2Relation.pptx (DB2).</small></p>
+      <p><a href="index.html">Tilbage til Learning Hub</a></p>
+    </footer>
+  </main>
+</body>
+</html>
